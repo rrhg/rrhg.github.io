@@ -2,23 +2,31 @@
 Is the component of the Operator framework that creates & manages operators.
 
 ## Which are the components of the Operator Framework
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
+1. Operator SDK
+1. OLM
+1. Operator Metering
 
 ##
 
 ##
 
 ## What is created inside k8s, when you install the OLM ?
-1. Item 1
+1. Two operators
+   1. Item 3a
+   1. Item 3b
 1. Item 2
+1. namespaces
+   1. Item 3a
+   1. Item 3b
+ 1. CRDs
+   1. Item 3a
+   1. Item 3b
+ 1. Item 3
+   1. Item 3a
+   1. Item 3b
 1. Item 3
    1. Item 3a
    1. Item 3b
-
 
 ##
 ##
