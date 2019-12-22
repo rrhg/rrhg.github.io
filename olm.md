@@ -6,7 +6,8 @@ Is the component of the Operator framework that creates & manages operators.
 1. OLM
 1. Operator Metering
 
-##
+## But what does the OLM actually do & how is acomplished ?
+When the OLM is installed, a bunch of kubernetes resources & operators(controllers/pods/loops) are created which will assist in the creation, updates & other management tasks of the application operator(like couchdb operator, mysql operator, etc).
 
 ##
 
