@@ -22,7 +22,7 @@ Sometimes, the documentation just says "operators" and can be confusing if you a
 
 
 ## What resources are created inside k8s, when you install the OLM ?
-1. CRDs (Custom Resource Definitions)
+1. kind: CustomResourceDefinition
    1. clusterserviceversions (csv) - Represents an Operator(& version) that should be running on the cluster, including requirements and install strategy.
    1. installplans - Represents a plan to install and resolve dependencies for Cluster Services.
    1. subscriptions - Subscribes service catalog to a source and channel to recieve updates for packages. _also used to install new operators_.
@@ -32,16 +32,30 @@ Sometimes, the documentation just says "operators" and can be confusing if you a
 1. kind: Namespace
    1. olm - 
    1. operators -
- 1. kind: ClusterRole
+1. kind: ClusterRole
    1. system:controller:operator-lifecycle-manager -
-   1. 
- 1. kind: ClusterRoleBinding
+1. kind: ClusterRoleBinding
    1. olm-operator-binding-olm -
 1. kind: Deployment
    1. olm-operator
-   1. Item 3b
-1. kind
+1. kind: Deployment
   1. catalog-operator
+1. kind: ClusterRole
+  1. aggregate-olm-edit -
+  1. aggregate-olm-view -
+1.kind: OperatorGroup
+  1. global-operators -
+  1. olm-operators -
+1. kind: ClusterServiceVersion -
+  1. packageserver - Represents an Operator package that is available from a given CatalogSource which will resolve to a ClusterServiceVersion.
+1. kind: CatalogSource
+  1. operatorhubio-catalog -
+
+  
+  
+  
+  
+  
   
 ##
 ##
