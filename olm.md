@@ -39,17 +39,17 @@ Sometimes, the documentation just says "operators" and can be confusing if you a
 1. kind: Deployment
    1. olm-operator
 1. kind: Deployment
-  1. catalog-operator
+   1. catalog-operator
 1. kind: ClusterRole
-  1. aggregate-olm-edit -
-  1. aggregate-olm-view -
+   1. aggregate-olm-edit -
+   1. aggregate-olm-view -
 1.kind: OperatorGroup
-  1. global-operators -
-  1. olm-operators -
+   1. global-operators -
+   1. olm-operators -
 1. kind: ClusterServiceVersion -
-  1. packageserver - Represents an Operator package that is available from a given CatalogSource which will resolve to a ClusterServiceVersion.
+   1. packageserver - Represents an Operator package that is available from a given CatalogSource which will resolve to a ClusterServiceVersion.
 1. kind: CatalogSource
-  1. operatorhubio-catalog -
+   1. operatorhubio-catalog -
 
 ## How do I install my operator with OLM?
 Create a subscription.yaml as explained [here](https://operator-framework.github.io/olm-book/docs/how-do-i-install-my-operator-with-olm.html) and then run :
