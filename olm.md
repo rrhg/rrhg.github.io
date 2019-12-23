@@ -3,7 +3,7 @@
 
 
 ## What is the  OLM ?
-Is the component of the Operator framework that creates & manages operators.
+Is the component of the [Operator Framework](https://github.com/operator-framework) that install & manages operators.
 
 ## Which are the components of the Operator Framework
 1. Operator SDK - for building operators.
