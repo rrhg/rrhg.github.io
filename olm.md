@@ -12,32 +12,37 @@ Is the component of the [Operator Framework](https://github.com/operator-framewo
 1. Operator Metering - for reporting.
 
 ## But what does the OLM actually do & how is acomplished ?
-The OLM is actually a framework. When it is [installed](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/install/install.md), a bunch of kubernetes resources are created which help & oversee the installation, updates, and management of the lifecycle of all of the Operators (and their associated services) running across a Kubernetes cluster.
+The OLM is actually a framework. When it is [installed](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/install/install.md), a bunch of kubernetes resources are created which help & oversee the installation, updates, and management of the lifecycle of all of the Operators (and their associated services) running across a Kubernetes cluster. Let's talk about all those resources and their purpose.
 
-##
+## Application operators vs olm operators vs operators
+But before going any further, there's a clarification I think should be pointed out.  
+Application operator(couchdb operator, mysql operator, etc) is the operator that will be managed by the OLM.  
+OLM operators(olm-operator & catalog-operator) are 2 adicional operators which are components of the OLM framework.  
+Sometimes, the documentation just says "operators" and can be confusing if you are not sure which one are referencing.  
 
-## What is created inside k8s, when you install the OLM ?
+
+## What resources are created inside k8s, when you install the OLM ?
 1. CRDs (Custom Resource Definitions)
    1. clusterserviceversions (csv) - Represents an Operator(& version) that should be running on the cluster, including requirements and install strategy.
    1. installplans - Represents a plan to install and resolve dependencies for Cluster Services.
-   1. subscriptions - Subscribes service catalog to a source and channel to recieve updates for packages.
-     1. _also used to install new operators_.
+   1. subscriptions - Subscribes service catalog to a source and channel to recieve updates for packages. _also used to install new operators_.
    1. catalogsources - A source configured to find packages and updates.
-   1.
-1. Item 2
-1. namespaces
-   1. Item 3a
+   1. operatorgroups - A grouping of namespaces for usage with an operator.
+   1. 
+1. kind: Namespace
+   1. olm - 
+   1. operators -
+ 1. kind: ClusterRole
+   1. system:controller:operator-lifecycle-manager -
+   1. 
+ 1. kind: ClusterRoleBinding
+   1. olm-operator-binding-olm -
+1. kind: Deployment
+   1. olm-operator
    1. Item 3b
- 1. CRDs
-   1. Item 3a
-   1. Item 3b
- 1. Item 3
-   1. Item 3a
-   1. Item 3b
-1. Item 3
-   1. Item 3a
-   1. Item 3b
-
+1. kind
+  1. catalog-operator
+  
 ##
 ##
 
