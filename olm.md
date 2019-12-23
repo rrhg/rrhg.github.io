@@ -1,5 +1,5 @@
 
-# An attemp to understand the OLM (OperatorLifecycleManager)
+# An attemp to understand the OLM (Operator Lifecycle Manager)
 
 
 ## What is the  OLM (Operator Lifecycle Manager)
