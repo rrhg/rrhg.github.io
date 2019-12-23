@@ -51,16 +51,11 @@ Sometimes, the documentation just says "operators" and can be confusing if you a
 1. kind: CatalogSource
   1. operatorhubio-catalog -
 
-  
-  
-  
-  
-  
-  
-##
-##
+## How do I install my operator with OLM?
+## Create a subscription.yaml as explained [here](https://operator-framework.github.io/olm-book/docs/how-do-i-install-my-operator-with-olm.html) and then run :
+**kubectl apply -f Subscription.yaml**
+
 
 First Header | Second Header
 ------------ | -------------
 Content from cell 1 | Content from cell 2
-
