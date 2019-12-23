@@ -2,7 +2,7 @@
 # An attemp to understand the OLM (Operator Lifecycle Manager)
 
 
-## What is the  OLM (Operator Lifecycle Manager)
+## What is the  OLM ?
 Is the component of the Operator framework that creates & manages operators.
 
 ## Which are the components of the Operator Framework
