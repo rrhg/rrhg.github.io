@@ -21,7 +21,7 @@ OLM operators(olm-operator & catalog-operator) are 2 adicional operators which a
 Sometimes, the documentation just says "operators" and can be confusing if you are not sure which one are referencing.  
 
 
-## What resources are created inside k8s, when you install the OLM ?
+## What resources are created inside k8s, when you [install](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/install/install.md) the OLM ?
 1. kind: CustomResourceDefinition
    1. clusterserviceversions (csv) - Represents an Operator(& version) that should be running on the cluster, including requirements and install strategy.
    1. installplans - Represents a plan to install and resolve dependencies for Cluster Services.
