@@ -1,10 +1,15 @@
+
+# An attemp to understand the OLM (OperatorLifecycleManager)
+
+
 ## What is the  OLM (Operator Lifecycle Manager)
 Is the component of the Operator framework that creates & manages operators.
 
 ## Which are the components of the Operator Framework
-1. Operator SDK
-1. OLM
-1. Operator Metering
+1. Operator SDK - for creating operators
+1. Operatorhub.io - where you push & pull the operator.
+1. OLM - for installing & managing operators
+1. Operator Metering - for reporting
 
 ## But what does the OLM actually do & how is acomplished ?
 When the OLM is installed, a bunch of kubernetes resources & operators(controllers/pods/loops) are created which will assist in the creation, updates & other management tasks of the application operator(like couchdb operator, mysql operator, etc).
