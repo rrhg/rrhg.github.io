@@ -17,9 +17,13 @@ The OLM is actually a framework. When it is [installed](https://github.com/opera
 ##
 
 ## What is created inside k8s, when you install the OLM ?
-1. Two operators
-   1. Item 3a
-   1. Item 3b
+1. CRDs (Custom Resource Definitions)
+   1. clusterserviceversions (csv) - Represents an Operator(& version) that should be running on the cluster, including requirements and install strategy.
+   1. installplans - Represents a plan to install and resolve dependencies for Cluster Services.
+   1. subscriptions - Subscribes service catalog to a source and channel to recieve updates for packages.
+     1. _also used to install new operators_.
+   1. catalogsources - A source configured to find packages and updates.
+   1.
 1. Item 2
 1. namespaces
    1. Item 3a
