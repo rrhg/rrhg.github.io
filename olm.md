@@ -12,7 +12,7 @@ Is the component of the Operator framework that creates & manages operators.
 1. Operator Metering - for reporting.
 
 ## But what does the OLM actually do & how is acomplished ?
-The OLM is actually a framework. When it is [installed](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/install/install.md), a bunch of kubernetes resources are created which will oversee the installation, updates, and management of the lifecycle of all of the Operators (and their associated services) running across a Kubernetes cluster.
+The OLM is actually a framework. When it is [installed](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/install/install.md), a bunch of kubernetes resources are created which help & oversee the installation, updates, and management of the lifecycle of all of the Operators (and their associated services) running across a Kubernetes cluster.
 
 ##
 
