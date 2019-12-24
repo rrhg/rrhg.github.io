@@ -23,7 +23,9 @@ Sometimes, the documentation just says "operators" and can be confusing if you a
 
 ## What resources are created inside k8s, when you [install](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/install/install.md) the OLM ?
 1. kind: CustomResourceDefinition
-   1. clusterserviceversions (csv) - Represents an Operator(& version) that should be running on the cluster, including requirements and install strategy.
+   1. clusterserviceversions (csv) - 
+      1. represents an Operator(& version) that should be running on the cluster, 
+      1. including requirements and install strategy.
       1. describes a template for the operator Deployment
    1. installplans - Represents a plan to install and resolve dependencies for Cluster Services.
    1. subscriptions - Subscribes service catalog to a source and channel to recieve updates for packages. _also used to install new operators_.
