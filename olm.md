@@ -65,7 +65,7 @@ Create a subscription.yaml as explained [here](https://operator-framework.github
 ## How does the OLM updates the application operators?
 Of the 2 OLM operators, the Catalog Operator is responsible for watching CatalogSources for updates to packages in channels and upgrading them (optionally automatically) to the latest available versions.  
 
-##Does that means that when the developer pushes a new version of the application operator to operatorhub.io it can automatically updated in my cluster?
+## Does that means that when the developer pushes a new version of the application operator to operatorhub.io it can automatically updated in my cluster?
 I don’t know. Maybe yes. See https://github.com/operator-framework/operator-lifecycle-manager/blob/master/README.md#discovery-catalogs-and-automated-upgrades
 
 ##
