@@ -1,7 +1,7 @@
 
 # An attemp to understand the OLM (Operator Lifecycle Manager)
 
-For a more detailed & technical explanation see [Understanding the OLM](https://docs.openshift.com/container-platform/4.1/applications/operators/olm-understanding-olm.html)
+For a more detailed & technical explanation see [Understanding the OLM by Red Hat Openshift documentation](https://docs.openshift.com/container-platform/4.1/applications/operators/olm-understanding-olm.html)
 
 ## What is the  OLM ?
 Is the component of the [Operator Framework](https://github.com/operator-framework) that install & manages operators.
