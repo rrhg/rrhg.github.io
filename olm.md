@@ -59,6 +59,11 @@ Create a subscription.yaml as explained [here](https://operator-framework.github
 **kubectl apply -f Subscription.yaml**
 
 
+## How does the OLM updates the application operators?
+Of the 2 OLM operators, the Catalog Operator is responsible for watching CatalogSources for updates to packages in channels and upgrading them (optionally automatically) to the latest available versions.  
+
+
+
 First Header | Second Header
 ------------ | -------------
 Content from cell 1 | Content from cell 2
