@@ -1,6 +1,7 @@
 
 # An attemp to understand the OLM (Operator Lifecycle Manager)
 
+For a more detailed & technical explanation see [Understanding the OLM](https://docs.openshift.com/container-platform/4.1/applications/operators/olm-understanding-olm.html)
 
 ## What is the  OLM ?
 Is the component of the [Operator Framework](https://github.com/operator-framework) that install & manages operators.
@@ -54,7 +55,7 @@ Sometimes, the documentation just says "operators" and can be confusing if you a
 1. kind: CatalogSource
    1. operatorhubio-catalog -
 
-## How do I install my operator with OLM?
+## How do I install an application operator with OLM?
 Create a subscription.yaml as explained [here](https://operator-framework.github.io/olm-book/docs/how-do-i-install-my-operator-with-olm.html) and then run :
 **kubectl apply -f Subscription.yaml**
 
