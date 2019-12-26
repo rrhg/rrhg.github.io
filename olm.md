@@ -70,6 +70,8 @@ I don’t know. Maybe yes. See https://github.com/operator-framework/operator-li
 
 ##
 
+#### clusterserviceversions
+
 First Header | Second Header
 ------------ | -------------
 Content from cell 1 | Content from cell 2
