@@ -17,11 +17,11 @@ Is the component of the [Operator Framework](https://github.com/operator-framewo
 ## But what does the OLM actually do & how ?
 The OLM is actually a framework. When it is [installed](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/install/install.md), a bunch of kubernetes resources are created which help & oversee the installation, updates, and management of the lifecycle of all of the Operators (and their associated services) running across a Kubernetes cluster. Let's talk about all those resources and their purpose.
 
-## Application operators vs OLM operators vs operators
-But before going any further, there's a clarification I think should be pointed out.  
-Application operator(couchdb operator, mysql operator, etc) is the operator that will be managed by the OLM.  
-OLM operators(olm-operator & catalog-operator) are 2 adicional operators which are components of the OLM framework.  
-Sometimes, the documentation just says "operators" and can be a source of confusion if you are not sure which one are referencing.  
+    Application Operators vs OLM Operators vs operators
+    But before going any further, there's a clarification I think should be pointed out.  
+    Application Operator(couchdb operator, mysql operator, etc) is the operator that will be managed by the OLM.  
+    OLM Operators(olm-operator & catalog-operator) are 2 adicional operators which are components of the OLM framework.  
+    Sometimes, the documentation just says "operators" and can be a source of confusion if you are not sure which one are they talking about
 
 
 ## What resources are created inside k8s, when you [install](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/install/install.md) the OLM ?
