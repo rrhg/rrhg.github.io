@@ -56,7 +56,10 @@ Sometimes, the documentation just says "operators" and can be a source of confus
    1. operatorhubio-catalog -
 
 ## How do I install an application operator with OLM?
-Create a subscription.yaml as explained [here](https://operator-framework.github.io/olm-book/docs/how-do-i-install-my-operator-with-olm.html) and then run ˋkubectl apply -f Subscription.yamlˋ
+Create a subscription.yaml as explained [here](https://operator-framework.github.io/olm-book/docs/how-do-i-install-my-operator-with-olm.html) and then run 
+ˋˋˋ
+kubectl apply -f Subscription.yaml
+ˋˋˋ
 
 
 ## How does the OLM updates the application operators?
