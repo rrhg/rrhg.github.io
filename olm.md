@@ -56,8 +56,7 @@ Sometimes, the documentation just says "operators" and can be a source of confus
    1. operatorhubio-catalog -
 
 ## How do I install an application operator with OLM?
-Create a subscription.yaml as explained [here](https://operator-framework.github.io/olm-book/docs/how-do-i-install-my-operator-with-olm.html) and then run :
-**kubectl apply -f Subscription.yaml**
+Create a subscription.yaml as explained [here](https://operator-framework.github.io/olm-book/docs/how-do-i-install-my-operator-with-olm.html) and then run ˋkubectl apply -f Subscription.yamlˋ
 
 
 ## How does the OLM updates the application operators?
@@ -73,6 +72,3 @@ I don’t know. Maybe yes. See https://github.com/operator-framework/operator-li
         1. including requirements and install strategy.
         1. describes a template for the operator Deployment
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
