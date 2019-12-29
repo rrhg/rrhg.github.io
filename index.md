@@ -6,4 +6,4 @@ What is [OLM](https://rrhg.github.io/olm)
 
 debugging-kind-kubelet-pulling-couchdb-image
 
-[markdown examples](https://rrhg.github.io/z-markdown-examples)
+my [markdown examples](z-markdown-examples)
