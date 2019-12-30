@@ -1,9 +1,9 @@
 
 
-What is [OLM](https://rrhg.github.io/olm)
+What is the [OLM](https://rrhg.github.io/olm)
 
 [couchdb-operator-kind-install.sh](https://github.com/rrhg/rrhg.github.io/blob/master/couchdb-operator-kind-install.sh)
 
-debugging-kind-kubelet-pulling-couchdb-image
+[debugging-kind-kubelet-pulling-couchdb-image](debugging-kind-kubelet-pulling-couchdb-image)
 
 my [markdown examples](z-markdown-examples)
