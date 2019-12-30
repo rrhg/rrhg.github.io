@@ -9,21 +9,21 @@
 
 kind create cluster --config kind-config-multi-node-cluster.yaml 
 
-echo ----------- 
-echo finished creating the cluster with kind
-echo to delete cluster : kind delete cluster
+echo '---------- '
+echo 'finished creating the cluster with kind'
+echo 'to delete cluster : kind delete cluster'
 echo
-echo other options :
-echo kubectl cluster-info --context kind-kind
-echo kubectl get nodes
-echo kind get clusters
+echo 'other options :'
+echo 'kubectl cluster-info --context kind-kind'
+echo 'kubectl get nodes'
+echo 'kind get clusters'
 
 echo
-echo ----------- starting olm and couchdb-operator installation acording to :
+echo '--------- starting olm and couchdb-operator installation acording to :'
 echo "https://cloud.ibm.com/docs/services/Cloudant?topic=cloudant-installing-the-operator"
 
 echo
-echo ---------- start applying crds.yaml and  olm.yaml
+echo 'start applying crds.yaml and  olm.yaml'
 
 kubectl apply -f crds.yaml
 kubectl apply -f olm.yaml
