@@ -62,12 +62,13 @@ fi
 
 kubectl rollout status -w deployment/packageserver --namespace="${namespace}"
 
-echo ---------------
-echo finished installing olm
+echo '-------------'
+echo 'finished installing olm'
 
 
 echo 
-echo ---------- starting kubectl create -f couchdb-operator.yaml
+echo '-------- starting kubectl create -f couchdb-operator.yaml'
+
 kubectl create -f couchdb-operator.yaml
 #kubectl create -f https://operatorhub.io/install/couchdb-operator.yaml
 
