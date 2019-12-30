@@ -11,7 +11,7 @@ kind create cluster --config kind-config-multi-node-cluster.yaml
 
 echo ----------- 
 echo finished creating the cluster with kind
-echo to delete cluster do : kind delete cluster
+echo to delete cluster : kind delete cluster
 echo
 echo other options :
 echo kubectl cluster-info --context kind-kind
@@ -19,7 +19,7 @@ echo kubectl get nodes
 echo kind get clusters
 
 echo
-echo ----------- starting olm & couchdb-operator installation acording to :
+echo ----------- starting olm and couchdb-operator installation acording to :
 echo "https://cloud.ibm.com/docs/services/Cloudant?topic=cloudant-installing-the-operator"
 
 echo
@@ -32,8 +32,8 @@ kubectl apply -f olm.yaml
 #kubectl apply -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/0.13.0/olm.yaml
 
 echo
-echo waiting for deployments to be ready
-echo checking every 30 seconds 
+echo "waiting for deployments to be ready"
+echo "checking every 30 seconds "
 echo
 
 namespace=olm
