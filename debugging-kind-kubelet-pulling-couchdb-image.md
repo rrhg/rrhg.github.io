@@ -85,6 +85,7 @@ fdbe210f49241       aa67fec7d7ef7       3 hours ago         Running             
 root@kind-worker:/# 
 
 let's try to pull the image   
+https://github.com/containerd/cri/tree/master/docs
 
      crictl pull busybox
     
