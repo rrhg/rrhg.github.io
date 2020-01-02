@@ -66,9 +66,10 @@ k describe pod -n my-couchdb c-mycluster-m-0 | less
     Ready:          False
 ...
 
-but with crictl ps those containers are not running
-root@kind-worker:/# crictl ps -a
-CONTAINER           IMAGE               CREATED             STATE               NAME                ATTEMPT             POD ID
+but with crictl ps those containers are not running   
+
+    root@kind-worker:/# crictl ps -a
+    CONTAINER           IMAGE               CREATED             STATE               NAME                ATTEMPT             POD ID
 e44469c804675       9e2e1d52d1433       3 hours ago         Running             couchdb-operator    0                   3adefb17be2b6
 c36d9687eeca2       79e06ae1d9e5b       3 hours ago         Running             catalog-operator    0                   7e53b901755f1
 0c417f7cac276       79e06ae1d9e5b       3 hours ago         Running             olm-operator        0                   f802ddec860d3
@@ -83,7 +84,8 @@ c36d9687eeca2       79e06ae1d9e5b       3 hours ago         Running             
 fdbe210f49241       aa67fec7d7ef7       3 hours ago         Running             kindnet-cni         0                   deac02483c8c7
 root@kind-worker:/# 
 
-let's try to pull the image
-    crictl pull busybox
+let's try to pull the image   
+
+     crictl pull busybox
     
 ........
