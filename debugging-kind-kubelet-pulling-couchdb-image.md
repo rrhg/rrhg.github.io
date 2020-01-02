@@ -83,4 +83,7 @@ c36d9687eeca2       79e06ae1d9e5b       3 hours ago         Running             
 fdbe210f49241       aa67fec7d7ef7       3 hours ago         Running             kindnet-cni         0                   deac02483c8c7
 root@kind-worker:/# 
 
+let's try to pull the image
+    crictl pull busybox
+    
 ........
