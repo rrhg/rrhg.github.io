@@ -89,3 +89,4 @@ let's try to pull the image
      crictl pull busybox
     
 ........
+https://hackernoon.com/inspecting-docker-images-without-pulling-them-4de53d34a604https://hackernoon.com/inspecting-docker-images-without-pulling-them-4de53d34a604
