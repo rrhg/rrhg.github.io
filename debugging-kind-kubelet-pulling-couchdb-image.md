@@ -59,4 +59,12 @@ But crictl pods show as if the couchdb pod is ready but when im back at kubectl 
 
 
 
+k describe pod -n my-couchdb c-mycluster-m-0 | less
+....
+    State:          Waiting
+      Reason:       PodInitializing
+    Ready:          False
+...
+
+
 ........
