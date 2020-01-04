@@ -13,7 +13,8 @@ https://stackoverflow.com/questions/47017801/docker-curl-to-other-container-in-s
 
     # The EXPOSE instruction informs Docker that the container listens
     # on the specified network ports at runtime. EXPOSE does not make 
-    # the ports of the container accessible to the host.
+    # the ports of the container accessible to the host. 
+    # makes it available only for inter-container communication
 
 
 Clean up  
