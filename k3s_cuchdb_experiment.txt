@@ -4,4 +4,4 @@ created
    3 dropplets 1gb each u1 u2 u3
    cloud firework - only ssh port 22 allowd
    with private networking enabled
-      Once the Droplet is created, its private IP address is displayed in the header.   
+      Click the Droplet’s name, to view public & private network information.
