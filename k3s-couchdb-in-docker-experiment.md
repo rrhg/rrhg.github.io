@@ -6,3 +6,8 @@ clud firewall port 22 ssh only in
 
 
     docker network create mynetwork
+
+
+Clean up  
+    docker container stop servertest
+    docker network rm mynetwork
