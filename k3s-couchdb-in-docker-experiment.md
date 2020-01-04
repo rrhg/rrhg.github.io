@@ -10,7 +10,9 @@ https://stackoverflow.com/questions/47017801/docker-curl-to-other-container-in-s
 
     docker network create mynetwork
 
-
+    # The docker network command supports creating networks for communication among containers without the need to expose or publish specific ports, because the containers connected to the network can communicate with each other over any port. 
+    
+    
     # The EXPOSE instruction informs Docker that the container listens
     # on the specified network ports at runtime. EXPOSE does not make 
     # the ports of the container accessible to the host. 
