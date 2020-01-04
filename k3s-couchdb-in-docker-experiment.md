@@ -24,3 +24,8 @@ Clean up
 
     docker container stop servertest
     docker network rm mynetwork
+
+
+https://phusion.github.io/baseimage-docker/
+Ioiij
+Thanks 
