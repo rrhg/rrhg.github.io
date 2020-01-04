@@ -10,6 +10,8 @@ https://stackoverflow.com/questions/47017801/docker-curl-to-other-container-in-s
 
     docker network create mynetwork
 
+
+    # Containers connected to the same user-defined bridge network automatically expose all ports to each other, and no ports to the outside world.
     # The docker network command supports creating networks for communication among containers without the need to expose or publish specific ports, because the containers connected to the network can communicate with each other over any port. 
     
     
