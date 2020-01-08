@@ -1,5 +1,7 @@
 
-aparentemente geodns is from $5 to 12 a month. https://www.ctrl.blog/entry/review-cheap-geodns.html
+aparentemente geodns is from $5 to 25 a month.
+        https://www.ctrl.blog/entry/review-cheap-geodns.html
+        https://mattgadient.com/geo-dns-cloudflare-vs-route-53-a-look-and-short-test-results/
 
 
 https://github.com/kubernetes-sigs/kubefed
