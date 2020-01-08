@@ -1,4 +1,7 @@
 
+aparentemente geodns is from $5 to 12 a month. https://www.ctrl.blog/entry/review-cheap-geodns.html
+
+
 https://github.com/kubernetes-sigs/kubefed
 vs o usar ambos
 
