@@ -27,3 +27,14 @@ Note that Submariner is in the pre-alpha stage, and should not be used for produ
 https://submariner.io/
 
 https://www.digitalocean.com/community/questions/managed-kubernetes-programmatic-worker-node-spinup
+
+
+## Offical Apache CouchDB library for Node.js.
+https://www.npmjs.com/package/nano
+
+
+
+
+
+
+----------
