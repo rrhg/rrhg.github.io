@@ -1,4 +1,14 @@
 
+## si un dropplet q sea federation master  
+    only until kubefed2 is ready
+    install k3s
+    create operator that watch for :
+        cluster resource - create new digitalocean managed k8s
+    another operator that make http calls to :
+        clusters k8s api
+        clusters nodejs service
+        if somethings wrong, will delete the cluster resource  
+        
 ## Managed k8s pq
 necesito avanzar.
 con la idea de spaces no voy a usar tanto storage
