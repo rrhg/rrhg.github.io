@@ -9,6 +9,10 @@
         clusters nodejs service
         if somethings wrong, will delete the cluster resource  
         
+        
+## each DOcluster will have these operators
+
+        
 ## Managed k8s pq
 necesito avanzar.
 con la idea de spaces no voy a usar tanto storage
