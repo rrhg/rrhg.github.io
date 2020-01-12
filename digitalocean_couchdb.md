@@ -39,7 +39,9 @@ un controller o nodejs microservices podria retreive all transactions for last m
 
 
 ## the problem with managed databases
-its only mysql & postgress & I cant find good docs on sync & offline first that is free and I dont have to reinvent the wheel that couchdb & pouchdb already solved. I could try, but for example, when multiple employees in different places, how make the server sync, and to other mobiles(like what transactions numbers should I use). Y IBM Cloudant es muy caro. 
+its only mysql & postgress & I cant find good docs on sync & offline first that is free and I dont have to reinvent the wheel that couchdb & pouchdb already solved. I could try, but for example, when multiple employees in different places, how make the server sync, and to other mobiles(like what transactions numbers should I use).  
+
+Y IBM Cloudant es muy caro. a2 hosting no es reliable. hay unos pre made en google y aws pero los precios parecen q pueden ser bien caros una vez aumenta el uso.
 
 
 
