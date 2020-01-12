@@ -11,7 +11,13 @@
         
         
 ## each DOcluster will have these operators
-
+1. monthly-backup-to-spaces
+   1. at beguinning of each month start jobs for each customer
+   1.
+   1.
+1.
+   1.
+   
         
 ## Managed k8s pq
 necesito avanzar.
