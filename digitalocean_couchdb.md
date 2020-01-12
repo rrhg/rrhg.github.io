@@ -38,6 +38,8 @@ just http calls
 un controller o nodejs microservices podria retreive all transactions for last month and send it as an object as an attachment or inline with an http put.
 
 
+## the problem with managed databases
+its only mysql & postgress & I cant find good docs on sync & offline first that is free and I dont have to reinvent the wheel that couchdb & pouchdb already solved. 
 
 
 
