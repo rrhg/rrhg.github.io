@@ -3,7 +3,8 @@
 necesito avanzar.
 con la idea de spaces no voy a usar tanto storage
 
-
+## no worry about node security because
+Worker nodes are built on Droplets, but unlike standard Droplets, worker nodes are managed with the Kubernetes command-line client kubectl and are not accessible with SSH. On both the master nodes and the worker nodes, DigitalOcean maintains the system updates, security patches, operating system configuration and installed packages.
 
 ##  multi zone pq
   aparentemente geodns is from $5 to 25 a month.  
