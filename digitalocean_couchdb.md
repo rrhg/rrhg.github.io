@@ -33,6 +33,12 @@ https://www.digitalocean.com/community/questions/managed-kubernetes-programmatic
 ## Offical Apache CouchDB library for Node.js.
 https://www.npmjs.com/package/nano
 
+## Spaces
+just http calls
+un controller o nodejs microservices podria retreive all transactions for last month and send it as an object as an attachment or inline with an http put.
+
+
+
 
 
 
