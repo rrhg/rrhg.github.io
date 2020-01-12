@@ -13,12 +13,19 @@
 ## each DOcluster will have these operators
 1. monthly-backup-to-spaces
    1. at beguinning of each month start jobs for each customer
+   1. each job get all previous month transactions including beguinning & ending balances 
+   1. create an object & uploads it to a space
+1.
+   1.
+   
+## nodejs when creates new customer
+1. creates new bucket in spaces for monthly object of all transactions
    1.
    1.
 1.
    1.
+   1.  
    
-        
 ## Managed k8s pq
 necesito avanzar.
 con la idea de spaces no voy a usar tanto storage
