@@ -2,6 +2,8 @@
 ## Managed k8s pq
 necesito avanzar.
 con la idea de spaces no voy a usar tanto storage
+https://www.digitalocean.com/community/questions/managed-kubernetes-programmatic-worker-node-spinup
+
 
 ## no worry about node security because
 Worker nodes are built on Droplets, but unlike standard Droplets, worker nodes are managed with the Kubernetes command-line client kubectl and are not accessible with SSH. On both the master nodes and the worker nodes, DigitalOcean maintains the system updates, security patches, operating system configuration and installed packages.
@@ -24,10 +26,8 @@ https://github.com/kubernetes-sigs/kubefed
 Creo q si uso K8s es más probable q otros lo usen. Pq busque k3s en production y federation y no hay mucho. Alomejor las compañías toda in lo ven como para ARM.  
 
 --------------
-Note that Submariner is in the pre-alpha stage, and should not be used for production purposes.
+## Note that Submariner is in the pre-alpha stage, and should not be used for production purposes.
 https://submariner.io/
-
-https://www.digitalocean.com/community/questions/managed-kubernetes-programmatic-worker-node-spinup
 
 
 ## Offical Apache CouchDB library for Node.js.
