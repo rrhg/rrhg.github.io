@@ -92,6 +92,9 @@ if [ ${#required_args[@]} -eq 0 ]; then
     echo
 else
     echo "required args list is NOT empty. NOT all req args were submited."
+    echo "you did not provide all required arguments"
+    echo "the required arguments are $required_args_string"
+    echo 'try ./required-script-long-args-getopt.sh --region ny --size one'
     echo "exiting script with status 1"
     exit 1
 fi
