@@ -1,0 +1,165 @@
+Pulumi config inputs secrets state stack local backend
+
+
+$ pulumi login --local
+#  Se hace primero pq si no, pulumi new va a intentar hacerte login al website de
+#  pulumi para usar el backend de ellos. Osea, guaradar el state(un file 
+#  o various stack files) en su website
+
+
+$ pulumi whoami -v
+User: root
+Backend URL: file://~
+#    indica cual state backend estamos usando
+#    parece q se queda asi para siempre hasta q hagamos pulumi logout
+#    inclusive despues de haber hecho delete al state file Pulumi.stackname.yaml
+#    seguia diciendo q estabamos usando local backend(local file)
+
+
+$ pulumi logout
+$ pulumi login 
+#    intento hacerme login en Pulumi website para usar el backend de ellos
+
+
+$ pulumi login --local
+$ pulumi new typescript -y
+#  te pide el passphrase
+#      q va a usar para encrypt secrets en el config
+#  crea un state file Pulumi.dev.yaml(le puso nombre dev a este stack pq -y)
+#    -contiene el encryptionsalt q usa junto con tu passphrase para los secrets q
+#         van a estar encrypted en la seccion config del 
+#            state file(stack)(Pulumi.dev.yaml)
+#  nota - Secretes encryption :
+ - When using the filesystem or cloud storage backend, you must use the passphrase-based secrets provider.
+
+
+info del parent project(folder) esta en el file
+- Pulumi.yaml 
+
+
+Creo q cualquiera de estos va a crear el state(un file for each stack) si no existe
+ - pulumi up
+ - pulumi stack init
+ - pulumi new
+ - pulumi preview
+ - pulumi config
+
+
+state puede estar en varios files(uno por stack/sub-project)
+ -Pulumi.stackname1.yaml
+ -Pulumi.stackname2.yaml
+
+stack = un namespace/sub-project del proyecto(folder) completo
+ejemplos de stack = development, production
+
+
+por ejemplo :
+$ pulumi stack init
+# ask for a name & I entered stack2
+# now we have 2 state files
+   Pulumi.dev.yaml     # created when pulumi new typescript -y
+   Pulumi.stack2.yaml  # created when pulumi stack init
+
+
+
+Logging out
+To delete stored credentials on your machine and log out from your current backend, run pulumi logout
+* NO EXPLICAN CUALES CREDENTIAL SE DELETE
+
+
+#  Algunos environmnet variables q pulumi va a buscar automaticamente
+PULUMI_CONFIG_PASSPHRASE # para q no te pida el passphrase cada vez q se va 
+                         # a editar el state file (stack) like Pulumi.dev.yaml
+
+DIGITALOCEAN_TOKEN # para q ese token no este en ningun file de pulumi
+
+Todavia no se como obtener el valor de un env variable dentro de node. 
+Alomejor no es necesario si voy a usar config
+trate varias formas, alomejor es q tengo q saber usar types
+
+
+How use config to asign variables values to be used by resources
+
+pulumi config set name BroomeLLC             # set a plaintext value
+pulumi config set --secret dbPassword S3cr37 # set an encrypted secret value
+cat my_key.pub | pulumi config set publicKey # from stdin
+
+#    this only writes those keys & values to the same stack(state) file, but
+#    in it's own section called config
+
+const config = new pulumi.Config();
+const name = config.get("name"); # from the nodejs index.ts file
+
+
+$ pulumi config set privateKeyPassphrase --secret [yourPassphraseHere]
+# maybe will not work- const privateKeyPassphrase = config.getSecret("privateKeyPassphrase");
+
+# DID NOT WORKED -//const ssh_fingerprint = config.getSecret("ssh_fingerprint");
+# YES DID WORKED    const ssh_fingerprint = config.requireSecret("ssh_fingerprint");
+
+
+
+$ cat rsa | pulumi config set privateKey --secret --
+#    maybe the -- is needed to end command & then accept stdin
+
+
+let keyName: pulumi.Input<string> = config.get("keyName");
+#    no estoy seguro pq esta manera puede ser necesaria si es una de las 
+#    properties de un resource 
+
+
+#    I dont understand the difference between these two
+let keyName: pulumi.Input<string> = config.get("keyName");
+const publicKey = config.get("publicKey");
+#    https://github.com/pulumi/examples/blob/master/aws-ts-ec2-provisioners/index.ts
+
+
+pulumi up
+pulumi destroy
+pulumi stack rm stack1
+
+
+******************************************************
+Filesystem or local
+To use the filesystem backend instead, simply pass the --local flag when logging in:
+
+pulumi login --local
+
+You should see Logged into <my-machine> as <my-user> (file://~) as a result where <my-machine> and <my-user> are your configured machine and user names respectively. This stores all stack checkpoints as JSON files to/home/.pulumi directory on your machine.
+
+
+
+Pulumi also manages secrets using a key encrypted with a passphrase and stored in Pulumi.<stack-name>.yaml. 
+
+This requires you enter the passphrase when you preview, update, or delete your stack. 
+
+If you want to collaborate with another person, you’ll need to share this passphrase with them as well. All of these overhead tasks will have to be managed separately when you opt into the local or remote state backend.
+
+
+****************************************************************
+Esto no me funciono. decia error TS2322: Type 'string | undefined' is not assignable to type 'Input<string>'
+
+All shell environment variables are passed to the running program and can be accessed using standard runtime APIs, such as process.env in Node.js and os.environ in Python, which can also be used for dynamic behavior. Configuration is preferable, however, because it is designed for multi-stack collaborative scenarios.
+
+no se si tenia q crear un type de otra manera o era que estas maneras q intente estaban mal :
+
+// get an environment variable
+//const ssh_fingerprint = process.env.SSH_FINGERPRINT;
+//  esto error q no podia asignar string a Input type
+
+//let keyName: pulumi.Input<string> = config.get("keyName");
+//const ssh_fingerprint: pulumi.Input<string> = process.env.SSH_FINGERPRINT;
+const ssh_fingerprint: pulumi.Input<string> = process.env['SSH_FINGERPRINT'];
+
+
+***************************************************************
+
+
+***********************************************
+alomejor hay q hacer pulumi refresh antes de pulumi up cuando usamos local backend
+
+If you lose the checkpoint for your stack, Pulumi will be unable to manage any existing resources. Additionally, since Pulumi thinks your stack is empty, Pulumi will attempt to recreate all of the resources in your stack the next time you run pulumi up.
+
+For example, when connected to pulumi.com, pulumi up ensures there are no other updates in flight for a given stack. This doesn’t happen with self-managed backends. 
+***********************************************
+
