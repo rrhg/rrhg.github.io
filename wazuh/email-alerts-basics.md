@@ -17,7 +17,7 @@ To make this as simple as posible, Wazuh will be installed in a standalone syste
     echo "Test Postfix using a relay host" | mail -s "Postfix  test" myuser@example.com
 ```
 
-Instruccions on how to install postfix can be found here
+Instruccions on how to install postfix can be found here: https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication
 
 
 3. **Next, install wazuh-server**
@@ -50,6 +50,9 @@ For more info : https://documentation.wazuh.com/3.12/installation-guide/installi
 ```
 For more info : - https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication
 
+*
+5. **Test if Wazuh can send emails**
+By lowering the email alerts level to 3, you should start receiving lots of emails from rules that come preconfigured out-of-the-box. Each email will specify the exact rule that triggered that alert.  We will be overwriting some of those rules. 
 > this is after a >
 
 
