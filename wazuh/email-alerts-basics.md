@@ -1,6 +1,6 @@
 
 
-## Sending security email alerts from Ubuntu 18.04 with Wazuh  
+## Sending security email alerts from Ubuntu 18.04 with [Wazuh](https://wazuh.com/)  
 
 1. **This is a very basic step-by-step explanation of installing Wazuh to send email alerts when :**
 * root login
@@ -10,7 +10,7 @@
 To make this as simple as posible, Wazuh will be installed in a standalone system. No agents & no Elastic stack.
 > Wazuh server monitors itself by default. The manager includes an agent (whose ID is 000) when you install it. Although it is not listed in Kibana, you can see that it really exists if you run this command in your manager: `/var/ossec/bin/agent_control -lc`
 
-
+---
 2. **As a prereqisite, postfix should be already installed & you should be able to send emails by :** 
 
 ```
@@ -19,7 +19,7 @@ To make this as simple as posible, Wazuh will be installed in a standalone syste
 
 Instruccions on how to install postfix can be found here: https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication
 
-
+---
 3. **Next, install wazuh-server**
 
 ```
@@ -36,7 +36,7 @@ Instruccions on how to install postfix can be found here: https://documentation.
 ```
 For more info : https://documentation.wazuh.com/3.12/installation-guide/installing-wazuh-manager/linux/ubuntu/wazuh_server_packages_ubuntu.html#wazuh-server-packages-ubuntu
 
-
+---
 4. **Configure Wazuh to start sending emails with postfix**
 
 * edit /var/ossec/etc/ossec.conf as follows:
@@ -50,7 +50,7 @@ For more info : https://documentation.wazuh.com/3.12/installation-guide/installi
 ```
 For more info : - https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication
 
-*
+---
 5. **Test if Wazuh can send emails**
 By lowering the email alerts level to 3, you should start receiving lots of emails from rules that come preconfigured out-of-the-box. Each email will specify the exact rule that triggered that alert.  We will be overwriting some of those rules. 
 > this is after a >
