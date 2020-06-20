@@ -57,7 +57,16 @@ systemctl restart wazuh-manager
 For more info : - https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication note: is at bottom of page.
 
 ---
-5. **Test if Wazuh can send emails**
+5. **Why did we received this starnge email**
+You should have received your first email with something like this :
+> Rule: 502 fired (level 3) -> "Ossec server started." Portion of the log(s): ossec: Ossec started.
+
+To find out more about that, we can look at 
+
+stock rules are located in various files in /var/ossec/ruleset/rules/ on the Wazuh manager and should not be edited in that location
+
+---
+6. **Test if Wazuh can send emails**
 By lowering the email alerts level to 3, you should start receiving lots of emails from rules that come preconfigured out-of-the-box. Each email will specify the exact rule that triggered that alert.  We will be overwriting some of those rules. 
 > this is after a >
 
