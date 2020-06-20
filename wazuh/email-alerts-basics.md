@@ -7,7 +7,7 @@
 * malicious command execution
 * files changes in /etc/
 
-To make this as simple as posible, Wazuh server will be installed in a standalone system. No agents, no API & no Elastic stack.  Wazuh/Ossec is a huge topic, here I was just trying to get something up & running in order understand what it does.
+To make this as simple as posible, Wazuh server will be installed in a standalone system. No agents in other machines, no API & no Elastic stack.  Wazuh/Ossec is a huge topic, here I was just trying to get something up & running in order understand what it does.
 > Wazuh server monitors itself by default. The manager includes an agent (whose ID is 000) when you install it. Although it is not listed in Kibana, you can see that it really exists if you run this command in your manager: `/var/ossec/bin/agent_control -lc`
 
 ---
