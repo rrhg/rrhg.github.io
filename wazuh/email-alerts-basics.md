@@ -1,27 +1,27 @@
 
 
-#### worker nodes are stock pulling couhdb images
+#### Sending security email alerts from Ubuntu 18.04 with Wazuh  
 
-a kind cluster node is a docker container
+1. This is a very basic step-by-step explanation of installing Wazuh to send email alerts when :
+* rooot login
+* suspecious commands
+* files changes in /etc/
 
-    docker ps
 
-    # $ docker logs `<container-id>`
-    # or
-    # docker exec -it container_name /bin/bash
+As a prereqisite, postfix should be already installed & you should be able to send emails by :
     
-    # this worked
-    docker exec -it kind-worker3 /bin/bash
+    # echo "Test Postfix using a relay host" | mail -s "Postfix  test" myuser@example.com
 
-How see kubectl logs once inside the node :
-various ways to try according to : https://stackoverflow.com/questions/34113476/where-are-the-kubernetes-kubelet-logs-located
+Instruccions on how to install postfix can be found here
 
-> if using systemd in node
+2. Next, install wazuh-server 
+
+> this is after a >
 
     journalctl -u kubelet
     # this worked
     
-> If you are trying to go directly to the file you can find the kubelet logs in /var/log/syslog directory. This is for ubuntu 16.04 and above.
+> this is after a >
 
 
 the nodes use containerd and to get pulled images had to do :
