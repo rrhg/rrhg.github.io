@@ -10,7 +10,7 @@
 
 2. As a prereqisite, postfix should be already installed & you should be able to send emails by :
     
-    # echo "Test Postfix using a relay host" | mail -s "Postfix  test" myuser@example.com
+    echo "Test Postfix using a relay host" | mail -s "Postfix  test" myuser@example.com
 
 Instruccions on how to install postfix can be found here
 
