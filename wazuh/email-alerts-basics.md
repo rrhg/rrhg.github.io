@@ -11,6 +11,7 @@ To make this as simple as posible, Wazuh server will be installed in a standalon
 > Wazuh server monitors itself by default. The manager includes an agent (whose ID is 000) when you install it. Although it is not listed in Kibana, you can see that it really exists if you run this command in your manager: `/var/ossec/bin/agent_control -lc`
 
 Wazuh/Ossec is a huge topic, here I was just trying to get something up & running in order understand what it does.
+
 ---
 2. **As a prerequisite, postfix should be already installed & you should be able to send emails by :** 
 
