@@ -35,7 +35,8 @@ apt update
 apt install wazuh-manager
 systemctl status wazuh-manager
 ```
-wazuh-manager.service should be active(running)
+The wazuh-manager.service should be active(running).
+
 For more info : https://documentation.wazuh.com/3.12/installation-guide/installing-wazuh-manager/linux/ubuntu/wazuh_server_packages_ubuntu.html#wazuh-server-packages-ubuntu
 
 ---
