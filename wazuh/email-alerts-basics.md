@@ -2,7 +2,7 @@
 
 #### Sending security email alerts from Ubuntu 18.04 with Wazuh  
 
-1. **This is a very basic step-by-step explanation of installing Wazuh to send email alerts when :
+1. **This is a very basic step-by-step explanation of installing Wazuh to send email alerts when :**
 * root login
 * malicious command execution
 * files changes in /etc/
