@@ -51,6 +51,9 @@ For more info : https://documentation.wazuh.com/3.12/installation-guide/installi
 <email_to>you@example.com</email_to>
 </global>
 ```
+```
+systemctl restart wazuh-manager
+```
 For more info : - https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication note: is at bottom of page.
 
 ---
