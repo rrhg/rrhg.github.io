@@ -28,22 +28,27 @@ Instruccions on how to install postfix can be found here
     apt upgrade
     apt-get install curl apt-transport-https lsb-release gnupg2
     curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | apt-key add -
-    - this can only be done by root
-    - sudo -s
-    # curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | apt-key add -
-    # echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | tee -a /etc/apt/sources.list.d/wazuh.list
-    # apt-get update
-    # apt-get install wazuh-manager
-    # systemctl status wazuh-manager
+    curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | apt-key add -
+    echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | tee -a /etc/apt/sources.list.d/wazuh.list
+    apt-get update
+    apt-get install wazuh-manager
+    systemctl status wazuh-manager
 ```
-
-it was active (running)
-did not install API or elastic stack
+For more info : https://documentation.wazuh.com/3.12/installation-guide/installing-wazuh-manager/linux/ubuntu/wazuh_server_packages_ubuntu.html#wazuh-server-packages-ubuntu
 
 
-I think the nodes are missing the couchdb and init container images :   
-Image:         ibmcom/couchdb2:latest
-Image:         ibmcom/couchdb-operator-mgmt:latest
+4. **Configure Wazuh to start sending emails with postfix**
+
+* edit /var/ossec/etc/ossec.conf as follows:
+```
+<global>
+<email_notification>yes</email_notification>
+<smtp_server>localhost</smtp_server>
+<email_from>USERNAME@example.com</email_from>
+<email_to>you@example.com</email_to>
+</global>
+```
+For more info : - https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication
 
 > this is after a >
 
