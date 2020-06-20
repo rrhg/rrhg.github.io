@@ -11,7 +11,7 @@ To make this as simple as posible, Wazuh will be installed in a standalone syste
 > Wazuh server monitors itself by default. The manager includes an agent (whose ID is 000) when you install it. Although it is not listed in Kibana, you can see that it really exists if you run this command in your manager: `/var/ossec/bin/agent_control -lc`
 
 ---
-2. **As a prereqisite, postfix should be already installed & you should be able to send emails by :** 
+2. **As a prerequisite, postfix should be already installed & you should be able to send emails by :** 
 
 ```
     echo "Test Postfix using a relay host" | mail -s "Postfix  test" myuser@example.com
@@ -34,6 +34,7 @@ Instruccions on how to install postfix can be found here: https://documentation.
     apt-get install wazuh-manager
     systemctl status wazuh-manager
 ```
+wazuh-manager.service should be active(running)
 For more info : https://documentation.wazuh.com/3.12/installation-guide/installing-wazuh-manager/linux/ubuntu/wazuh_server_packages_ubuntu.html#wazuh-server-packages-ubuntu
 
 ---
