@@ -1,4 +1,6 @@
 
+[security email alerts in Ubuntu 18.04 with Wazuh](z-markdown-examples)
+
 [01/14/20 Making script long arguments mandatory/required](https://github.com/rrhg/rrhg.github.io/blob/master/helper-scripts/required-script-long-args-getopt.sh)
 
 What is the [OLM](https://rrhg.github.io/olm)
