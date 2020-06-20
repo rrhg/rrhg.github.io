@@ -22,6 +22,7 @@ Instruccions on how to install postfix can be found here
 
 3. **Next, install wazuh-server**
 
+```
     sudo -s
     apt update
     apt upgrade
@@ -34,8 +35,10 @@ Instruccions on how to install postfix can be found here
     # apt-get update
     # apt-get install wazuh-manager
     # systemctl status wazuh-manager
-    - it was active (running)
-    -did not install API or elastic stack
+```
+
+it was active (running)
+did not install API or elastic stack
 
 
 I think the nodes are missing the couchdb and init container images :   
