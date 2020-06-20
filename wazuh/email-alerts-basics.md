@@ -7,6 +7,8 @@
 * malicious command execution
 * files changes in /etc/
 
+To make this as simple as posible, Wazuh will be installed in a standalone system. No agents & no Elastic stack.
+
 
 2. As a prereqisite, postfix should be already installed & you should be able to send emails by 
 
@@ -15,6 +17,7 @@
 ```
 
 Instruccions on how to install postfix can be found here
+
 
 3. Next, install wazuh-server 
 
