@@ -85,6 +85,6 @@ As specified in https://documentation.wazuh.com/3.12/learning-wazuh/replace-stoc
 > Custom changes to the ruleset must be done within files in the /var/ossec/etc/rules/ folder. In order to change a default rule, then the overwrite="yes" option must be used when declaring the rule.
 
 When overwriting a rule for the purpose of sending email alerts, we could :
-* Add or remove <options>alert_by_email</options>
+* Add or remove <options>alert_by_email</options>.
 * Change the level. For example, if in /var/ossec/etc/ossec.conf we find <email_alert_level>12</email_alert_level>, then (in the case of rule 502), we would need to change level="3" to level="13". 
 
