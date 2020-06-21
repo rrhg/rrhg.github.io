@@ -79,9 +79,12 @@ To find out more about the email we just received, we can take a look at rule 50
 
 ---
 6. **How can we overwrite rules**
+
 As specified in https://documentation.wazuh.com/3.12/learning-wazuh/replace-stock-rule.html 
 > The Wazuh Ruleset is maintained by Wazuh, Inc. and is contributed to by the Wazuh community. These stock rules are located in various files in /var/ossec/ruleset/rules/ on the Wazuh manager and should not be edited in that location because they are overwritten when you upgrade Wazuh manager or perform a Wazuh Ruleset update.
 > Custom changes to the ruleset must be done within files in the /var/ossec/etc/rules/ folder. In order to change a default rule, then the overwrite="yes" option must be used when declaring the rule.
 
-
+When overwriting a rule for the purpose of sending email alerts, we could :
+*Add or remove <options>alert_by_email</options>
+*Change the level. For example, if in /var/ossec/etc/ossec.conf we find <email_alert_level>12</email_alert_level>, then (in the case of rule 502), we would need to change level="3" to level="13". 
 
