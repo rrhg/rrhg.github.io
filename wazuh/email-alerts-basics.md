@@ -89,11 +89,11 @@ When overwriting a rule for the purpose of sending email alerts, we could :
 ### How to learn more about which rules do what :
    1. Read the documentation [https://documentation.wazuh.com/3.12/user-manual/ruleset/index.html](https://documentation.wazuh.com/3.12/user-manual/ruleset/index.html)
    1. Inspect /var/ossec/ruleset/rules/
-   1. Play with Wazuh
-      1. vim /var/ossec/etc/ossec.conf
-      1. change \<email_alert_level>12\</email_alert_level>, to a very low level like 3
-      1. start making lots of suspicious activities that Wazuh is suppose to identify
-      1. you may also have to change the frequency & other configuration of some modules
+   1. Play with Wazuh :
+      * vim /var/ossec/etc/ossec.conf
+      * change \<email_alert_level>12\</email_alert_level>, to a very low level like 3
+      * start making lots of suspicious activities that Wazuh is suppose to identify
+      * you may also have to change the frequency & other configuration of some modules
 
 
 ---
