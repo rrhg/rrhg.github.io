@@ -128,6 +128,6 @@ uid: 0
 ---
 ### Other examples
 * Keep watch for malicious command execution https://documentation.wazuh.com/3.12/learning-wazuh/audit-commands.html
-* Detect an SSH brute-force attack https://documentation.wazuh.com/3.12/learning-wazuh/ssh-brute-force.html
+* Detect an SSH brute-force attack https://documentation.wazuh.com/3.12/learning-wazuh/ssh-brute-force.html/
 
 
