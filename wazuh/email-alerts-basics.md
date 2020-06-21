@@ -77,7 +77,7 @@ To find out more about the email we just received, we can take a look at rule 50
 ---
 ### How can we overwrite rules
 
-As specified in https://documentation.wazuh.com/3.12/learning-wazuh/replace-stock-rule.html 
+As specified in [https://documentation.wazuh.com/3.12/learning-wazuh/replace-stock-rule.html](https://documentation.wazuh.com/3.12/learning-wazuh/replace-stock-rule.html)
 > The Wazuh Ruleset is maintained by Wazuh, Inc. and is contributed to by the Wazuh community. These stock rules are located in various files in /var/ossec/ruleset/rules/ on the Wazuh manager and should not be edited in that location because they are overwritten when you upgrade Wazuh manager or perform a Wazuh Ruleset update.
 > Custom changes to the ruleset must be done within files in the /var/ossec/etc/rules/ folder. In order to change a default rule, then the overwrite="yes" option must be used when declaring the rule.
 
@@ -87,7 +87,7 @@ When overwriting a rule for the purpose of sending email alerts, we could :
 
 ---
 ### How to learn more about which rules do what :
-   1. Read the documentation https://documentation.wazuh.com/3.12/user-manual/ruleset/index.html
+   1. Read the documentation [https://documentation.wazuh.com/3.12/user-manual/ruleset/index.html](https://documentation.wazuh.com/3.12/user-manual/ruleset/index.html)
    1. Inspect /var/ossec/ruleset/rules/
    1. Play with Wazuh
       1. vim /var/ossec/etc/ossec.conf
@@ -127,7 +127,7 @@ uid: 0
 
 ---
 ### Other examples
-* Keep watch for malicious command execution https://documentation.wazuh.com/3.12/learning-wazuh/audit-commands.html
-* Detect an SSH brute-force attack https://documentation.wazuh.com/3.12/learning-wazuh/ssh-brute-force.html/
+* Keep watch for malicious command execution [https://documentation.wazuh.com/3.12/learning-wazuh/audit-commands.html](https://documentation.wazuh.com/3.12/learning-wazuh/audit-commands.html)
+* Detect an SSH brute-force attack [https://documentation.wazuh.com/3.12/learning-wazuh/ssh-brute-force.html/](https://documentation.wazuh.com/3.12/learning-wazuh/ssh-brute-force.html/)
 
 
