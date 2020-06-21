@@ -2,7 +2,7 @@
 
 ## Sending security email alerts from Ubuntu 18.04 with [Wazuh](https://wazuh.com/)  
 
-1. **This is a very basic step-by-step explanation of installing Wazuh to send email alerts when root login**
+###This is a very basic step-by-step explanation of installing Wazuh to send email alerts when root login
 
 To make this as simple as posible, Wazuh manager server will be installed in a standalone system. No agents in other machines, no API & no Elastic stack.
 > Wazuh server monitors itself by default. The manager includes an agent (whose ID is 000) when you install it. Although it is not listed in Kibana, you can see that it really exists if you run this command in your manager: `/var/ossec/bin/agent_control -lc`
@@ -10,7 +10,7 @@ To make this as simple as posible, Wazuh manager server will be installed in a s
 Wazuh/Ossec is a huge topic, here I was just trying to get something up & running in order understand what it does.
 
 ---
-2. ***As a prerequisite, postfix should be already installed & you should be able to send emails by :***
+###As a prerequisite, postfix should be already installed & you should be able to send emails by :
 
 ```
 echo "Test Postfix using a relay host" | mail -s "Postfix  test" myuser@example.com
