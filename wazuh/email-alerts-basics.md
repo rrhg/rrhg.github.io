@@ -55,7 +55,7 @@ systemctl restart wazuh-manager
 For more info : - [https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication](https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication)  note: find it at bottom of page
 
 ---
-### Why did we received this strange email
+### Why did we received this strange email ?
 
 You should have received your first email with something like this :
 > Rule: 502 fired (level 3) -> "Ossec server started." Portion of the log(s): ossec: Ossec started.
