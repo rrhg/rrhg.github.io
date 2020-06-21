@@ -52,7 +52,7 @@ Restart the manager
 ```
 systemctl restart wazuh-manager
 ```
-For more info : - [https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication note: is at bottom of page](https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication)
+For more info : - [https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication](https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication)  note: find it at bottom of page
 
 ---
 ### Why did we received this strange email
