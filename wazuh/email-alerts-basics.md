@@ -130,3 +130,5 @@ uid: 0
 * Keep watch for malicious command execution [https://documentation.wazuh.com/3.12/learning-wazuh/audit-commands.html](https://documentation.wazuh.com/3.12/learning-wazuh/audit-commands.html)
 * Detect an SSH brute-force attack [https://documentation.wazuh.com/3.12/learning-wazuh/ssh-brute-force.html/](https://documentation.wazuh.com/3.12/learning-wazuh/ssh-brute-force.html/)
 
+---
+_Shameless plug : I'm looking for a remote job or apprenticeship.  Have self learned about Linux, Reactjs, Nodejs & Django but have no previous experience. Don't hesitate to contact me @ rrh@fastmail.com_ 
