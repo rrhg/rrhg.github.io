@@ -2,7 +2,7 @@
 
 ## Sending security email alerts from Ubuntu 18.04 with [Wazuh](https://wazuh.com/)  
 
-### This is a very basic step-by-step explanation of installing Wazuh to send email alerts when root login
+### This is a very basic step-by-step explanation of installing Wazuh to send email alerts
 
 To make this as simple as posible, Wazuh manager server will be installed in a standalone system. No agents in other machines, no API & no Elastic stack.
 > Wazuh server monitors itself by default. The manager includes an agent (whose ID is 000) when you install it. Although it is not listed in Kibana, you can see that it really exists if you run this command in your manager: `/var/ossec/bin/agent_control -lc`
