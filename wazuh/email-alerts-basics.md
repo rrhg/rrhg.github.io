@@ -10,13 +10,13 @@ To make this as simple as posible, Wazuh manager server will be installed in a s
 Wazuh/Ossec is a huge topic, here I was just trying to get something up & running in order understand what it does.
 
 ---
-1. **As a prerequisite, postfix should be already installed & you should be able to send emails by :** 
+2. **As a prerequisite, postfix should be already installed & you should be able to send emails by :** 
 
 ```
 echo "Test Postfix using a relay host" | mail -s "Postfix  test" myuser@example.com
 ```
 
-Instruccions on how to install postfix can be found here: https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication
+Instruccions on how to install postfix can be found here: [https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication](https://documentation.wazuh.com/3.12/user-manual/manager/manual-email-report/smtp_authentication.html#smtp-authentication)
 
 ---
 1. **Next, install wazuh-manager**
