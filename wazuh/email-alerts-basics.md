@@ -63,7 +63,7 @@ For more info : - https://documentation.wazuh.com/3.12/user-manual/manager/manua
 You should have received your first email with something like this :
 > Rule: 502 fired (level 3) -> "Ossec server started." Portion of the log(s): ossec: Ossec started.
 
-Wazuh/Ossec come with "stock rules"(should not edited but we can overwrite them) which are located in various files in /var/ossec/ruleset/rules/ on the Wazuh manager.
+Wazuh/Ossec comes with "stock rules"(should not be edited but we can overwrite them) which are located in various files in /var/ossec/ruleset/rules/ on the Wazuh manager.
 
 To find out more about the email we just received, we can take a look at rule 502 which is located in /var/ossec/ruleset/rules/0015-ossec_rules.xml
 
@@ -78,9 +78,10 @@ To find out more about the email we just received, we can take a look at rule 50
 ```
 
 ---
-6. **Test if Wazuh can send emails**
-By lowering the email alerts level to 3, you should start receiving lots of emails from rules that come preconfigured out-of-the-box. Each email will specify the exact rule that triggered that alert.  We will be overwriting some of those rules. 
-> this is after a >
+6. **How can we overwrite rules**
+As specified in https://documentation.wazuh.com/3.12/learning-wazuh/replace-stock-rule.html 
+> The Wazuh Ruleset is maintained by Wazuh, Inc. and is contributed to by the Wazuh community. These stock rules are located in various files in /var/ossec/ruleset/rules/ on the Wazuh manager and should not be edited in that location because they are overwritten when you upgrade Wazuh manager or perform a Wazuh Ruleset update.
+> Custom changes to the ruleset must be done within files in the /var/ossec/etc/rules/ folder. In order to change a default rule, then the overwrite="yes" option must be used when declaring the rule.
 
 
 
