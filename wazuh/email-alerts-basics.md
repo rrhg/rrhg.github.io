@@ -2,6 +2,8 @@
 
 ## Sending security email alerts from Ubuntu 18.04 with [Wazuh](https://wazuh.com/)  
 
+### 6/21/20
+
 ### This is a very basic step-by-step explanation of installing Wazuh to send email alerts
 
 To make this as simple as posible, Wazuh manager server will be installed in a standalone system. No agents in other machines, no API & no Elastic stack.
