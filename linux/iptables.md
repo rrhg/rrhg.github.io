@@ -4,7 +4,7 @@
 
 ### 07/04/2020
 
-1 - How list ports status with iptables & what each flag means
+1. How list ports status with iptables & what each flag means
 
 ```
 sudo iptables -L -n -v (L=list,   n=numbers,   v=verbose)
@@ -12,7 +12,7 @@ sudo iptables -L -n -v (L=list,   n=numbers,   v=verbose)
 
 <br>
 
-1 - Does netstat show if port is blocked by iptables ?
+1. Does netstat show if port is blocked by iptables ?
 
 * After a lot of searching, I don't think it does. It only shows if there's a process listening on that port.
 
@@ -24,7 +24,7 @@ sudo iptables -L -n -v (L=list,   n=numbers,   v=verbose)
 
 <br>
 
-How open a port
+1. How open a port
 
 ```
 iptables -A INPUT -p tcp -m tcp --dport 141 -j ACCEPT
