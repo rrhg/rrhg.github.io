@@ -20,6 +20,7 @@ How open a port
 ```
 iptables -A INPUT -p tcp -m tcp --dport 141 -j ACCEPT
 ```
+
 <br>
 How the previous will show after we do $ sudo iptables -L -n -v
 ```
