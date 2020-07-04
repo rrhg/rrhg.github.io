@@ -1,4 +1,7 @@
 
+
+[iptables random questions](/linux/iptables.md)
+
 [security email alerts in Ubuntu 18.04 with Wazuh](/wazuh/email-alerts-basics.md)
 
 [01/14/20 Making script long arguments mandatory/required](https://github.com/rrhg/rrhg.github.io/blob/master/helper-scripts/required-script-long-args-getopt.sh)
