@@ -8,13 +8,16 @@ How list ports status with iptables & what each flag means
 ```
 sudo iptables -L -n -v (L=list,   n=numbers,   v=verbose)
 ```
-<br>
+
+
 Does netstat show if port is blocked by iptables ?
 * After a lot of searching, I don't think it does. It only shows if there's a process listening on that port.
 
 
 > open port != unblocked by iptables
-<br>
+
+
+\<br>
 How open a port
 ```
 iptables -A INPUT -p tcp -m tcp --dport 141 -j ACCEPT
