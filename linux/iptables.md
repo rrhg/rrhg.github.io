@@ -18,6 +18,7 @@ Does netstat show if port is blocked by iptables ?
 
 ```
 ```
+<br>
 How open a port
 ```
 iptables -A INPUT -p tcp -m tcp --dport 141 -j ACCEPT
