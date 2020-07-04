@@ -67,7 +67,7 @@ sudo iptables -L -n -v|grep 443
 
 But for port 444, that returns nothing, how know if is been blocked?
 
-## Apparently, there is no command for that. We can only search for rules. If there are no rules then the default is the policy of the CHAIN. 
+## Apparently, there is no command for that(if port is blocked). We can only search for rules. If there are no rules then the default is the policy of the CHAIN. 
 
 <br>
 
