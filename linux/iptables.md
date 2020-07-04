@@ -14,7 +14,6 @@ Does netstat show if port is blocked by iptables ?
 
 
 > open port != unblocked by iptables
-
 <br>
 How open a port
 ```
