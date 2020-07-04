@@ -15,9 +15,18 @@ sudo iptables -L -n -v (L=list,   n=numbers,   v=verbose)
 Does netstat show if port is blocked by iptables ?
 
 * After a lot of searching, I don't think it does. It only shows if there's a process listening on that port.
+* A problem arise about the minning of "closed". Apparently for some people, closed means that no process is listening on that port, while for others, it inlcudes the fact that the port is been blocked by the iptables. And these are two completely different things.
+* as wikipedia says "
 
+> The above use of the terms "open" and "closed" can sometimes be misleading, though; it blurs the distinction between a given port being reachable (unfiltered) and whether there is an application actually listening on that port. Technically, a given port being "open" (in this context, reachable) is not enough for a communication channel to be established. There needs to be an application (service) listening on that port, accepting the incoming packets and processing them. If there is no application listening on a port, incoming packets to that port will simply be rejected by the computer's operating system.
 
-> open port != unblocked by iptables
+Ports can be "closed" (in this context, filtered) through the use of a firewall. The firewall will filter incoming packets, only letting through those packets for which it has been configured. Packets directed at a port which the firewall is configured to "close" will simply be dropped in transit, as though they never existed.
+
+<br>
+
+### I think, when someone says that a port is closed, we have to try to figure out if is referring to one of 2 things :
+* No process is listening
+* iptables has blocked the port
 
 ```
 ```
@@ -93,14 +102,13 @@ None of the chains have any rules, so they all fall through to their default pol
 
 Would ufw be better ?
 
-Could be, but I dont think it can be used with lockdown.sh
+Could be, but I dont think it can be used with [lockdown.sh](https://github.com/rrhg/lockdown.sh)
 
 And we would loose some rules that lockdown.sh implement to protect about:
   - spoofing attacks
   - masking attacks
   - others. see lockdown.sh
 
-<br>
 <br>
 
 Is lockdown.sh blocking all ports except 141 80 443 ?
