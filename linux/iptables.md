@@ -40,11 +40,11 @@ How the previous will show after we do $ sudo iptables -L -n -v
 
 <br>
 
-how did I find out that 141, 80, 443 were the only ports with rules ?
+How did I find out that 141, 80, 443 were the only ports with rules ?
 
-> in the INPUT chain the policy was drop & the only pot with accept was 141.
+> in the INPUT chain the policy was drop & the only port with a rule that contained ACCEPT was 141.
 
-But what about 80 y 443 ?
+But what about port 80 y 443 ?
 
 > Is in the other chain called docker
 
@@ -56,7 +56,7 @@ Chain DOCKER (2 references)
 ```
 
 <br>
-
+<br>
 How find rules for specific port :
 
 ```
@@ -65,7 +65,7 @@ sudo iptables -L -n -v|grep 443
 
 <br>
 
-But for port 444, that returns nothing, how know if is been blocked?
+But for port 444, the previous command returns nothing, how can we know if it is been blocked?
 
 ## Apparently, there is no command for that (know if port is been blocked). We can only search for rules. If there are no rules then the default is the policy of the CHAIN. 
 
@@ -89,21 +89,23 @@ All that means :
 None of the chains have any rules, so they all fall through to their default policy of "ACCEPT". Everything is accepted.
 
 <br>
+<br>
 
 Would ufw be better ?
 
 Could be, but I dont think it can be used with lockdown.sh
 
-we would loose some rules that lockdown implement to protect about:
+And we would loose some rules that lockdown.sh implement to protect about:
   - spoofing attacks
   - masking attacks
   - others. see lockdown.sh
 
 <br>
+<br>
 
 Is lockdown.sh blocking all ports except 141 80 443 ?
 
-> It looks like it does, except with this rule that looks I dont know if allow or deny all ports that ... :
+> It looks like it does, but I would need to understand what this rule does. Dont know if allow or deny all ports excessive RST :
 
 ```
 # Drop packets with excessive RST to avoid Masked attacks
