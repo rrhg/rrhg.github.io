@@ -12,12 +12,17 @@ sudo iptables -L -n -v (L=list,   n=numbers,   v=verbose)
 
 <br>
 
+#### Command to find if a port is been blocked by iptables ( the word "closed" sometimes means that a process not listening, but necessaryly means that iptables is blocking it. Depends on the person explaining it )  
+## Apparently, there is no command for that (know if port is been blocked). We can only search for rules. If there are no rules then the default is the policy of the CHAIN. More on this below ...  
+
+<br>
+
 #### A good explanation of iptables fundamentals  
 https://www.thegeekstuff.com/2011/01/iptables-fundamentals/
 
 <br>
 
-Does netstat show if port is blocked by iptables ?
+#### Does netstat show if port is blocked by iptables ?
 
 * After a lot of searching, I don't think it does. It only shows if there's a process listening on that port.
 * A problem arise about the minning of "closed". Apparently for some people, closed means that no process is listening on that port, while for others, it inlcudes the fact that the port is been blocked by the iptables. And these are two completely different things.
@@ -29,16 +34,13 @@ Ports can be "closed" (in this context, filtered) through the use of a firewall.
 
 <br>
 
-### I think, when someone says that a port is closed, we have to try to figure out if is referring to one of 2 things :
+#### I think, when someone says that a port is closed, we have to try to figure out if is referring to one of 2 things :
 * No process is listening
 * iptables has blocked the port
 
-```
-```
-
 <br>
 
-How open a port
+#### How open a port
 
 ```
 iptables -A INPUT -p tcp -m tcp --dport 141 -j ACCEPT
@@ -46,7 +48,7 @@ iptables -A INPUT -p tcp -m tcp --dport 141 -j ACCEPT
 
 <br>
 
-How the previous will show after we do $ sudo iptables -L -n -v
+#### How the previous will show after we do $ sudo iptables -L -n -v
 
 ```
 43  2544 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:141
@@ -54,11 +56,11 @@ How the previous will show after we do $ sudo iptables -L -n -v
 
 <br>
 
-How did I find out that 141, 80, 443 were the only ports with rules ?
+#### How did I find out that 141, 80, 443 were the only ports with rules ?
 
 > in the INPUT chain the policy was drop & the only port with a rule that contained ACCEPT was 141.
 
-But what about port 80 y 443 ?
+#### But what about port 80 y 443 ?
 
 > Is in the other chain called docker
 
