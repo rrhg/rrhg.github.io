@@ -30,7 +30,7 @@ https://www.thegeekstuff.com/2011/01/iptables-fundamentals/
 
 > The above use of the terms "open" and "closed" can sometimes be misleading, though; it blurs the distinction between a given port being reachable (unfiltered) and whether there is an application actually listening on that port. Technically, a given port being "open" (in this context, reachable) is not enough for a communication channel to be established. There needs to be an application (service) listening on that port, accepting the incoming packets and processing them. If there is no application listening on a port, incoming packets to that port will simply be rejected by the computer's operating system.
 
-Ports can be "closed" (in this context, filtered) through the use of a firewall. The firewall will filter incoming packets, only letting through those packets for which it has been configured. Packets directed at a port which the firewall is configured to "close" will simply be dropped in transit, as though they never existed.
+> Ports can be "closed" (in this context, filtered) through the use of a firewall. The firewall will filter incoming packets, only letting through those packets for which it has been configured. Packets directed at a port which the firewall is configured to "close" will simply be dropped in transit, as though they never existed.
 
 <br>
 
@@ -56,7 +56,7 @@ iptables -A INPUT -p tcp -m tcp --dport 141 -j ACCEPT
 
 <br>
 
-#### How did I find out that 141, 80, 443 were the only ports with rules ?
+#### How did I find out that 141, 80, 443 were the only ports with rules ? .. After server had been secured by running  [lockdown.sh](https://github.com/rrhg/lockdown.sh)
 
 > in the INPUT chain the policy was drop & the only port with a rule that contained ACCEPT was 141.
 
@@ -72,8 +72,9 @@ Chain DOCKER (2 references)
 ```
 
 <br>
+---
 <br>
-How find rules for specific port :
+#### How find rules for specific port :
 
 ```
 sudo iptables -L -n -v|grep 443
@@ -81,7 +82,7 @@ sudo iptables -L -n -v|grep 443
 
 <br>
 
-But for port 444, the previous command returns nothing, how can we know if it is been blocked?
+#### But for port 444, the previous command returns nothing, how can we know if it is been blocked?
 
 ## Apparently, there is no command for that (know if port is been blocked). We can only search for rules. If there are no rules then the default is the policy of the CHAIN. 
 
@@ -105,9 +106,10 @@ All that means :
 None of the chains have any rules, so they all fall through to their default policy of "ACCEPT". Everything is accepted.
 
 <br>
+-----
 <br>
 
-Would ufw be better ?
+#### Would ufw be better than using iptables directly ?
 
 Could be, but I dont think it can be used with [lockdown.sh](https://github.com/rrhg/lockdown.sh)
 
@@ -118,7 +120,7 @@ And we would loose some rules that lockdown.sh implement to protect about:
 
 <br>
 
-Is lockdown.sh blocking all ports except 141 80 443 ?
+#### Is lockdown.sh blocking all ports except 141 80 443 ?
 
 > It looks like it does, but I would need to understand what this rule does. Dont know if allow or deny all ports excessive RST :
 
@@ -129,7 +131,7 @@ iptables -A INPUT -p tcp -m tcp --tcp-flags RST RST -m limit --limit 2/second --
 
 <br>
 
-How remove a rule
+#### How remove a rule
 
 ```
 sudo iptables -D INPUT -p tcp --dport xxxx -j ACCEPT
@@ -137,7 +139,7 @@ sudo iptables -D INPUT -p tcp --dport xxxx -j ACCEPT
 
 <br>
 
-Open a port for single ip
+#### Open a port for single ip
 
 ```
 sudo iptables -A INPUT -p tcp -s your_server_ip --dport xxxx -j ACCEPT
@@ -145,7 +147,7 @@ sudo iptables -A INPUT -p tcp -s your_server_ip --dport xxxx -j ACCEPT
 
 <br>
 
-Save the new rules & make them permanent ?
+#### Save the new rules & make them permanent ?
 * On Ubuntu 16.04 and Ubuntu 18.04 use the following commands
 
 ```
@@ -153,3 +155,11 @@ sudo netfilter-persistent save
 sudo netfilter-persistent reload
 ```
 
+<br>
+
+#### How log dropped packages by iptables  
+But be careful, read comments, need to have rules that accept the ones you want, or it will drop everything 
+
+https://www.thegeekstuff.com/2012/08/iptables-log-packets/?utm_source=feedburner  
+
+<br>
