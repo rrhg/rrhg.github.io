@@ -1,5 +1,6 @@
 
-Need to leave 2 spaces after each line. <enter> ny itself doesn't work
+Need to leave 2 spaces after each line. The enter key by itself doesn't work (like space bar twice then enter)  
+<br>
 
 First Header | Second Header
 ------------ | -------------
