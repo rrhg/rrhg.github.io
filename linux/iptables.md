@@ -72,7 +72,6 @@ Chain DOCKER (2 references)
 ```
 
 <br>
----
 <br>
 #### How find rules for specific port :
 
@@ -84,10 +83,7 @@ sudo iptables -L -n -v|grep 443
 
 #### But for port 444, the previous command returns nothing, how can we know if it is been blocked?
 
-## Apparently, there is no command for that (know if port is been blocked). We can only search for rules. If there are no rules then the default is the policy of the CHAIN. 
-
-<br>
-
+## Apparently, there is no command for that (know if port is been blocked). We can only search for rules. If there are no rules then the default is the policy of the CHAIN.  
 For example :
 
 ```
@@ -106,7 +102,6 @@ All that means :
 None of the chains have any rules, so they all fall through to their default policy of "ACCEPT". Everything is accepted.
 
 <br>
------
 <br>
 
 #### Would ufw be better than using iptables directly ?
