@@ -4,11 +4,16 @@
 
 ### 07/04/2020
   
-How list ports status with iptables & what each flag means
+#### How list ports status with iptables & what each flag means
 
 ```
 sudo iptables -L -n -v (L=list,   n=numbers,   v=verbose)
 ```
+
+<br>
+
+#### A good explanation of iptables fundamentals\
+https://www.thegeekstuff.com/2011/01/iptables-fundamentals/
 
 <br>
 
