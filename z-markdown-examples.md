@@ -1,3 +1,6 @@
+
+Need to leave 2 spaces after each line. <enter> ny itself doesn't work
+
 First Header | Second Header
 ------------ | -------------
 Content from cell 1 | Content from cell 2
