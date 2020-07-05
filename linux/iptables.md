@@ -12,7 +12,7 @@ sudo iptables -L -n -v (L=list,   n=numbers,   v=verbose)
 
 <br>
 
-#### A good explanation of iptables fundamentals\
+#### A good explanation of iptables fundamentals  
 https://www.thegeekstuff.com/2011/01/iptables-fundamentals/
 
 <br>
