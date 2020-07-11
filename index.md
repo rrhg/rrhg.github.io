@@ -1,4 +1,5 @@
 
+[helper-scripts](/helper-scripts/index.md)
 
 [iptables random questions](/linux/iptables.md) 7/04/20
 
