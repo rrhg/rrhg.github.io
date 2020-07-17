@@ -1,6 +1,8 @@
 
 [helper-scripts](/helper-scripts/index.md)
 
+[Django signals - basic idea](/django/signals.md)
+
 [iptables random questions](/linux/iptables.md) 7/04/20
 
 [security email alerts in Ubuntu 18.04 with Wazuh](/wazuh/email-alerts-basics.md) 6/21/20
