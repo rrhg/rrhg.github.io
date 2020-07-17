@@ -38,3 +38,14 @@ One example of when will this be useful ?
 ```
 MyModel.objects.filter(has_open_reports=True)
   
+  
+An idea of how index_together works according to [this stackoverflow question](https://stackoverflow.com/questions/21753699/does-the-order-of-index-together-matter-in-a-django-model) :  
+The order of index_together explains the "path" the index is created. You can query from left to the right to profit from the index.
+
+So with your first index_together:  
+```
+    index_together = ('name', 'address', 'favorite_color')
+```  
+if your first filter is name the index is used. If the first is name and the second is address the index is used, too.
+
+But if you filter by address and then name or address, favorite_color the index can't be used.
