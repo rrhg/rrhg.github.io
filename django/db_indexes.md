@@ -1,8 +1,8 @@
 
-What is an index ?  
+### What is a database index ?  
 Indexes are special lookup tables that the database search engine can use to speed up data retrieval.
 
-An example of defining an index in Django: (from [Misago project](https://github.com/rafalp/Misago))
+### An example of defining an index in Django: (from [Misago project](https://github.com/rafalp/Misago))
 ```
 class Post(models.Model):
     ...
@@ -34,13 +34,14 @@ class Post(models.Model):
         ]
 ```
   
-One example of when will this be useful ?  
+### One example of when will this be useful ?  
 ```
 MyModel.objects.filter(has_open_reports=True)
 ```  
-
   
-An idea of how index_together works according to [this stackoverflow question](https://stackoverflow.com/questions/21753699/does-the-order-of-index-together-matter-in-a-django-model) :  
+  
+  
+### An idea of how index_together works according to [this stackoverflow question](https://stackoverflow.com/questions/21753699/does-the-order-of-index-together-matter-in-a-django-model) :  
 
 The order of index_together explains the "path" the index is created. You can query from left to the right to profit from the index.
 
