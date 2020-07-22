@@ -9,3 +9,13 @@
    1. each tree has a top level(0) node 
    1. top level node has an id
    1. that id will be stored in category__tree_id
+
+
+
+### When getting categories, in adition ti have id of top level(o) node, we also need the type( a field named `special_role`) which is just a string. there's 2 options :
+* PRIVATE_QAS_ROOT_NAME
+* QAS_ROOT_NAME  
+
+
+
+-----------------
