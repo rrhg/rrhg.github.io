@@ -12,9 +12,14 @@
 
 
 
-### When getting categories, in adition ti have id of top level(o) node, we also need the type( a field named `special_role`) which is just a string. there's 2 options :
-* PRIVATE_QAS_ROOT_NAME
-* QAS_ROOT_NAME  
+### When getting categories, in adition to have id of top level(o) node, we also need the type :
+* for a field named `special_role`
+* they're just a strings, defined in misago/categories/__init__.py
+  * PRIVATE_THREADS_ROOT_NAME = "private_threads"
+  * THREADS_ROOT_NAME = "root_category"
+* and I added these 2
+  * PRIVATE_QAS_ROOT_NAME = "private_qas"
+  * QAS_ROOT_NAME = "qa_root_category"
 
 
 
