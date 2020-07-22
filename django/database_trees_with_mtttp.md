@@ -24,7 +24,8 @@
 
 
 Note 1  
-```    def get_special(self, special_role):
+```
+def get_special(self, special_role):
         cache_name = "%s_%s" % (CACHE_NAME, special_role)
 
         special_category = cache.get(cache_name, "nada")
