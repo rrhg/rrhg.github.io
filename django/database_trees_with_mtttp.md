@@ -20,7 +20,23 @@
 * and I added these 2
   * PRIVATE_QAS_ROOT_NAME = "private_qas"
   * QAS_ROOT_NAME = "qa_root_category"
+* I think only the level nodes have a `special_role` field because when querying for the a root node, we use the `get` method. See note 1.
 
 
+Note 1  
+```    def get_special(self, special_role):
+        cache_name = "%s_%s" % (CACHE_NAME, special_role)
+
+        special_category = cache.get(cache_name, "nada")
+        if special_category == "nada":
+            # simply get the category with this special_role
+            # get is when only u are sure only one exist
+            # no results will raise a DoesNotExist exception.
+            # if more than one item matches it will raise MultipleObjectsReturned, 
+            # which again is an attribute of the model class itself.
+            special_category = self.get(special_role=special_role)
+            cache.set(cache_name, special_category)
+        return special_category
+```
 
 -----------------
