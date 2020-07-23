@@ -11,6 +11,20 @@
    1. that id will be stored in category__tree_id
 
 
+### How to keep data ordered  
+```
+class Genre(MPTTModel):
+    name = models.CharField(max_length=50, unique=True)
+    parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
+
+    class MPTTMeta:
+        order_insertion_by = ['name']
+```  
+
+### Why in misago when querying `MyMPttModel.objects.filter(level=0, special_role=specialrole)` we always get the same node ?  
+Because Misago does not assign the Meta class property `order_insertion_by`. 
+The first MyMPttModel created (for that special role like `private`, will always be level=0.  
+
 
 ### When getting categories, in adition to have id of top level(o) node, we also need the type :
 * for a field named `special_role`
