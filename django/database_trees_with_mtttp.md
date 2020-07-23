@@ -2,7 +2,7 @@
 ## How misago uses django-mttp to improve performance in terms of amount of database queries  
 
 ### high level idea  
-1. `category` is a django model
+1. `category` is a django-mttp MPTTModel
 1. users can create `category` children, grand children, an so on.
 1. for each `category` model
    1. mttp created a tree of nodes in the database
@@ -23,7 +23,7 @@ class Genre(MPTTModel):
 
 ### Why in misago when querying `MyMPttModel.objects.filter(level=0, special_role=specialrole)` we always get the same node ?  
 Because Misago does not assign the Meta class property `order_insertion_by`. 
-The first MyMPttModel created (for that special role like `private`, will always be level=0.  
+The first MyMPttModel created (for that special role like `private`) will always be level=0.  
 
 
 ### When getting categories, in adition to have id of top level(o) node, we also need the type :
