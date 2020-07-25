@@ -9,8 +9,10 @@
 * we could write code like this :  
 
 ```
-    def _register_providers(self, requester, modules_to_import):
+    def import_modules(self, requester, modules_to_import):
         for module in modules_to_import:
             if module.requester == requester:
                 importlib.import_module(module)
 ```
+  
+  [import vs __import__() vs importlib.import_module()](https://stackoverflow.com/questions/28231738/import-vs-import-vs-importlib-import-module)
