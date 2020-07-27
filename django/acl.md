@@ -2,7 +2,7 @@
 ## Implementing ACL (access control lists) for permissions in Django  
 ### as done by misago  
 
-1. The basic idea
+1. The basic idea (mental model)
    1. We define permissions 
    1. Middleware get permissions for each request
    1. Views check for permissions 
@@ -23,6 +23,8 @@ Now let's start breaking it down in more detailed steps
    1.
    1.
 1. Views check for permissions
+   1. Get permissions from the request object
+   1. Decide what content can be shown to this user
    1. Permissions can be checked for :
       1. View
       1. Models
@@ -34,7 +36,9 @@ Now let's start breaking it down in more detailed steps
    1. Template tags 
    1.
    1.  
-   
+  
+---
+Now even more details & code examples  
    
 1. Each app has it's own permissions in permissions.py
 1.
