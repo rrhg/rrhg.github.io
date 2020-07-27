@@ -1,9 +1,7 @@
 
 [helper-scripts](/helper-scripts/index.md)
 
-Django:
-* [signals - basic idea](/django/signals.md)
-* [indexes - basic idea](/django/db_indexes.md)
+[Django](/django/index.md)
 
 
 [iptables random questions](/linux/iptables.md) 7/04/20
