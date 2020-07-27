@@ -8,6 +8,7 @@
    1. Views check for permissions 
    1. Response only includes the content allowed for this user
    
+---
 Now let's start breaking it down in more detailed steps  
 1. Defining Permissions
    1. Each Django app have it's own ACL (access control lists of permissions)
