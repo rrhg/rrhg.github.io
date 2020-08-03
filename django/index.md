@@ -5,6 +5,8 @@
 
 [making_checksums](making_checksums.md)
 
+[creating-fake-data-in-django](creating-fake-data-in-django.md)
+
 [db_indexes](db_indexes.md)
 
 [database_trees_with_mttp](database_trees_with_mttp.md)
