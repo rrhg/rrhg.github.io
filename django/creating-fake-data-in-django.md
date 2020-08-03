@@ -31,7 +31,8 @@ class Command(BaseCommand):
         )
 
     # this will be executed when we run $python manage.py createfakequestions
-    def handle(self, *args, **options):
+    #########################################################################
+def handle(self, *args, **options):
         items_to_create = options["questions"]
         fake = Factory.create()
         message = "Creating %s fake questions...\n"
@@ -48,6 +49,7 @@ class Command(BaseCommand):
                 starter = User.objects.order_by("?").last()
 
             # create a question & an answer & link them together
+            ####################################################
             question = get_fake_question(fake, starter)
             question.save()
 
@@ -75,6 +77,7 @@ def get_fake_question(fake, starter=None):
     question = _create_base_question(fake)
     
     # create an answer & make it the first answer for this question
+    ###############################################################
     question.first_answer = get_fake_answer(fake, question, starter)
     question.save(update_fields=["first_answer"])
     return question
