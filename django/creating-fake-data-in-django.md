@@ -73,6 +73,8 @@ corpus_short = EnglishCorpus(max_length=150)
 
 def get_fake_question(fake, starter=None):
     question = _create_base_question(fake)
+    
+    # create an answer & make it the first answer for this question
     question.first_answer = get_fake_answer(fake, question, starter)
     question.save(update_fields=["first_answer"])
     return question
@@ -118,11 +120,9 @@ def get_fake_answer(fake, question, poster=None):
     posted_on = timezone.now()
 
     answer = Answer.objects.create(
-        # category=thread.category,
         question=question,
         question_answer_poster=poster,
         poster_name=poster.username if poster else get_fake_username(fake),
-        # content=original,
         original=original,
         parsed=parsed,
         posted_on=posted_on,
