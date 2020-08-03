@@ -2,7 +2,7 @@
 
 Django has an [easy way to add custom commands](https://docs.djangoproject.com/en/3.0/howto/custom-management-commands/) to your proyect.   
 
-Let's build a custom command named `fakequestions`. It will create fake data of `Question` & `Answer` models.  Credit to misago proyect for most of this code.  
+Let's build a custom command named `fakequestions`. It will create fake data of `Question` & `Answer` models.  Credit to [misago proyect](https://github.com/rafalp/Misago) for most of this code.  
 
 
 ```
