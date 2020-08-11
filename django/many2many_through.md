@@ -35,7 +35,19 @@ class Tagged(models.Model):
         
 ```  
 
-Once created, can get :  
+One way to create could be :  
+```
+            tagged = Tagged(
+                question=question,
+                tag=tag,
+                tagged_by=starter,
+                )
+            tagged.save()  
+```  
+
+
+
+Once created, we can get :  
 ```
 question.tag_set.all()  
 tag.questions.all()
