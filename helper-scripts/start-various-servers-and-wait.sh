@@ -32,4 +32,5 @@ while sleep 300; do echo "django docker server pid == $django_docker_server_pid"
 
 # the script will not exit 
 # when stopped with ctrl c, then will kill both processes
+# https://spin.atomicobject.com/2017/08/24/start-stop-bash-background-process/
 wait 
