@@ -6,7 +6,7 @@
 > not dependent of input size.  
 > time & space(ram) used by the algorithm itself does NOT change.   
 > space(ram) used by the algorithm does not include space used by the input.   
-> they call it "  
+
 AKA :
 1. Constant Time
 1. An algorithm is said to have a constant time when it is not dependent on the input data (n). 
