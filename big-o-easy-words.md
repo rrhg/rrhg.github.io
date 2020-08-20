@@ -24,7 +24,9 @@ AKA :
 # O(n)   
 ### linear   
 
-* time increases at most linearly with the size of the input data   
+* if input=1:  time=1   space=1
+* if input=10: time=10  space=10
+* ime increases at most linearly with the size of the input data   
 * space(ram) 
 
 
