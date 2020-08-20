@@ -6,6 +6,9 @@
 > not dependent of input size.  
 > time & space(ram) used by the algorithm itself does NOT change.   
 > space(ram) used by the algorithm does not include space used by the input.   
+> Only local variables constitute work memory.    
+
+
 
 AKA :
 1. Constant Time
