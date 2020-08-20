@@ -29,7 +29,10 @@ AKA :
 
 
 # O(log n)   
-### logarithmic   
+### logarithmic     
+* goes between O(1) & O(n) because it only uses a subset (but not all) of the input.   
+* for example a tree binary search will only work with a few nodes  
+*
 
 
 
