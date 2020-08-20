@@ -11,7 +11,13 @@ AKA :
 1. Constant Time
 1. An algorithm is said to have a constant time when it is not dependent on the input data (n). 
 1. space complexity of O(1) means that the space required by the algorithm to process data is constant; it does not grow with the size of the data on which the algorithm is operating.
-1. use only O(1) memory
+1. use only O(1) memory   
+
+
+
+# O(N)
+* time increases at most linearly with the size of the input data   
+* space(ram) 
 
 
 
