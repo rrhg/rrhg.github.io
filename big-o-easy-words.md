@@ -1,6 +1,8 @@
 
 
-# O(1) 
+# O(1)   
+### constant   
+
 * time does NOT change  
 * space(ram) does NOT change  
 > not dependent of input size.  
@@ -19,10 +21,15 @@ AKA :
 
 
 
-# O(N)
+# O(n)   
+### linear   
+
 * time increases at most linearly with the size of the input data   
 * space(ram) 
 
+
+# O(log n)   
+### logarithmic   
 
 
 
