@@ -41,4 +41,14 @@ AKA :
 https://towardsdatascience.com/understanding-time-complexity-with-python-examples-2bda6e8158a7
 
 
+# O(n + a)   
+### O(input1 + input2)   
+* when we have 2 inputs(ex. 2 lists) & we run a for loop on each one   
+```
+for i in array1:
+    ...
+for i in array2:
+    ...
+```
+
 
