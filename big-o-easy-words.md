@@ -5,6 +5,7 @@
 * space(ram) does NOT change  
 > not dependent of input size.  
 > time & space(ram) used by the algorithm itself does NOT change.   
+> The memory complexity of an algorithm is the amount of memory it uses.
 > space(ram) used by the algorithm does not include space used by the input.   
 > Only local variables constitute work memory.    
 
