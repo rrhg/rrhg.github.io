@@ -6,7 +6,7 @@ As I was reading Daniel Feldroy's book "**Two Scoops of Django 3.x, Best Practic
 
 Misago has the same concept, but the file is called utils.py.  
 
-So to practice this concept, in the next django app I was going to create, which is named [exams](#), decided to get some of the code out of models & views, and put it in a [utils.py](#) file.  I would had prefer to call it helpers.py but since other apps use utils.py, decided to keep the consistency.
+So to practice this concept, in the next django app I was going to create, which is named [exams](#), decided to get some of the code out of models & views, and put it in a [utils.py](#) file.  I would had prefer to call it helpers.py but since other apps in the [project](#) use utils.py, decided to keep the consistency.
 
 
 
