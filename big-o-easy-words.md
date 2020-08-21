@@ -59,6 +59,16 @@ for i in array2:
     ...
 ```   
 
+# O(n * a)   
+### O(input1 * input2)   
+* when we have 2 inputs(ex. 2 lists) & we run a NESTED for loop on each one  
+```
+for i1 in array1:
+    for i2 in array2:
+        print(i1 + i2)
+``` 
+
+
 
 # O(n^2)   
 *   
