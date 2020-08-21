@@ -74,9 +74,9 @@ for i1 in array1:
 *   
 
 ```
-for i in array1:
-    for i in array1:
-        print(i)
+for i1 in array1:
+    for i2 in array1:
+        print(i1 + i2)
     ...
 
 
