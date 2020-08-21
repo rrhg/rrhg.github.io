@@ -51,10 +51,8 @@ https://towardsdatascience.com/understanding-time-complexity-with-python-example
 
 
 
-# O(n log n)   linear * log
-### logarithmic     
-* goes between O(1) & O(n) because it only uses a subset (but not all) of the input.   
-* for example a tree binary search will only work with a few nodes  
+# O(n log n)   linear * log  
+*   
 *
 
 
@@ -87,7 +85,8 @@ for i1 in array1:
     for i2 in array1:
         print(i1 + i2)
     ...
-   
+```   
+
    
 # O(2^n)   exponential
    
