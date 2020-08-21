@@ -2,6 +2,10 @@
 
 # O(1)   
 ### constant   
+```
+def myprint(array1):
+    print(array1[0]# the time it takes to execute this does NOT depends on the input size
+```
 
 * time does NOT change  
 * space(ram) does NOT change  
