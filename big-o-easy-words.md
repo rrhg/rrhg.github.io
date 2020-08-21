@@ -24,10 +24,14 @@ AKA :
 # O(n)   
 ### linear   
 
-* if input=1:  time=1   space=1
-* if input=10: time=10  space=10
-* ime increases at most linearly with the size of the input data   
-* space(ram) 
+* if input=1:  time=1t   space=1s
+* if input=10: time=10t  space=10s
+* this algorithm time(& space) increases at most linearly with the size of the input data   
+*    
+```
+for i in array1:
+    do_something(i)...# the time it takes to execute this depends on the input size
+```
 
 
 # O(log n)   
