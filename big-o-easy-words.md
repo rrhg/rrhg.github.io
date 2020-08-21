@@ -90,5 +90,13 @@ for i1 in array1:
    
    
 # O(2^n)   exponential
+   
+# Each line of code can have it's own Big O notation   
+# Drop lower order terms   
+* only consider the higher order of complexity   
+* if a line of code has O(n), an another has O(n^2), we say the algorith has O(n^2) complexity. (because the difference in order of magnitude between eac one is so large )
+# Drop constants terms   
+* not include O(1) if another line of code has O(n)   
 
+# Worse case scenario
 
