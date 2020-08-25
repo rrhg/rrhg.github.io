@@ -11,8 +11,8 @@ let routes = [ ...  (include the component & path)
 ...
 ReactDOM.render(
   <Provider store={store.getStore()}>
-    <Router routes={routes} history={browserHistory} /
+    <Router routes={routes} history={browserHistory} />
   </Provider>,
-    rootElement
+    rootElement  // <-this can be the same element the initializer just found
   )
 ```
