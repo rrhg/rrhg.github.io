@@ -1,6 +1,6 @@
 
 1. Each Django view inserts:   
-   1. a special property in the context, or   
+   1. a special property in the (response)template context, or   
    1. an html element with a special id   
 1. React initializers looks for this property
    1. ```if (context.has("QUESTIONS")) {... ```, or
@@ -15,4 +15,6 @@ ReactDOM.render(
   </Provider>,
     rootElement  // <-this can be the same element the initializer just found
   )
-```
+```   
+
+Note : each "initializer component" is javascript(React) code that runs first & can mount other components in the router. 
