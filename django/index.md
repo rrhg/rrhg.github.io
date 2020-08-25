@@ -9,6 +9,6 @@
 
 [creating-fake-data-in-django](creating-fake-data-in-django.md)
 
-[python print & js console can both send output to the terminal running the server](https://github.com/rrhg/rrhg.github.io/blob/master/django/python_print_%26_js_console_log.md)
+[python print & js console: both can send output to the terminal running the server](https://github.com/rrhg/rrhg.github.io/blob/master/django/python_print_%26_js_console_log.md)
 
 
