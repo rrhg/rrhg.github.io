@@ -3,6 +3,8 @@
 
 [signals](signals.md)
 
+[react_dynamic_routes_with_django.md](https://github.com/rrhg/rrhg.github.io/blob/master/django/react_dynamic_routes_with_django.md)
+
 [acl_permissions](acl_permissions.md)
 
 [making_checksums](making_checksums.md)
