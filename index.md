@@ -3,6 +3,7 @@
 
 [Django](/django/index.md)
 
+[React](/react/index.md)
 
 [iptables random questions](/linux/iptables.md) 7/04/20
 
