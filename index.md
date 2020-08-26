@@ -5,4 +5,3 @@
 
 [React](/react/index.md)
 
-my [markdown examples](z-markdown-examples)
