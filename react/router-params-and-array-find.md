@@ -13,6 +13,7 @@ let routes = [
 ]
 ```   
 
+## link to the component
 ```
  const linkToExamination = "/exams/examination/"+exam.id
   ...  
@@ -22,6 +23,7 @@ let routes = [
 ```
 
 
+## inside the component   
 
 > Note: router params are pass as a string, but if the id is a number, thats what `find()` will return. So we have to use `String()`.
 ```
