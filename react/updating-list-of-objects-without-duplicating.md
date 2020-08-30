@@ -22,7 +22,7 @@
     console.log(JSON.stringify(scores))
   }
   ```   
-  Note : if using React, no need to use state because it didn't neet rerendering.   
+  Note : Was using React, but no need to use state because it didn't neet rerendering.   
   It was just been store until user press antoher button to calculate total.
   Each score choice could be seen because it was an html select with options.
   
