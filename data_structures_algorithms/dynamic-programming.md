@@ -12,3 +12,6 @@ Some thoughts in my own words.
       1. How many steps from ...
    1. Optimization (Maximum or Minimum)
       1. Minimum steps needed...
+
+
+1. Optimize a problem by storing intermediaries 
