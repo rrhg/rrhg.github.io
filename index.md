@@ -5,3 +5,4 @@
 
 [React](/react/index.md)
 
+[python vs javascript](./python-vs-javascript/class_inheritance.html)
