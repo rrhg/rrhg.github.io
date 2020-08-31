@@ -7,6 +7,7 @@ Profiling :
    1. helps visualize what queries are slow & what python code is slow
    1. use Apdex
    1. Apdex is an open standard for measuring software performance
+   1. how mark important page or api endpoints
    1. 8-29-2020
 1. slow query log (have to be turned on in database conf)
 1. debug toolbar
