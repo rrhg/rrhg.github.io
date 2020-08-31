@@ -8,6 +8,7 @@ Profiling :
    1. use Apdex
    1. Apdex is an open standard for measuring software performance
    1. how mark important page or api endpoints
+   1. has a free plan for one user: https://newrelic.com/pricing
    1. 8-29-2020
 1. slow query log (have to be turned on in database conf)
 1. debug toolbar
