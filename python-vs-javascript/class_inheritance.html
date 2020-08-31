@@ -5,16 +5,16 @@
 
 <button id="mro" >How does Method Resolution Order affects inheritance & what methods are called ? </button>   
 
-<div id="mroa">Python : `class child(Parent1, Parent2) : ` will look first for a method in Parent1, if doesn't find it, then looks in Parent2</div>
+<div id="mroa" style="{display: none}">Python : `class child(Parent1, Parent2) : ` will look first for a method in Parent1, if doesn't find it, then looks in Parent2</div>
 
 <div> How can we make the child call the method  of both parents ? By calling super(Parent1, self).method from the Parent1 method
 
     <script type="text/javascript"> 
         document.getElementById("mro").onclick = function() { 
   
-            let d = document.getElementById("mroa").style.display
-            if (d == "none"){d = "block"}
-            if (d == "block") {d = "none"}
+            let d = document.getElementById("mroa")
+            if (d.style.display == "none"){d.style.display = "block"}
+            if (d.style.display == "block") {d.style.display = "none"}
   
         } 
   
