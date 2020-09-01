@@ -19,3 +19,5 @@ Some thoughts in my own words.
 
 
 1. Optimize a problem by storing intermediaries 
+
+1. Iteration vs Recursion 
