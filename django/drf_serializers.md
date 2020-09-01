@@ -6,7 +6,7 @@
    1. convert model instances to Python datatypes 
    1. deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.
    1.
-   1. "Serializers are responsible for taking the user input, validating it and turning it into an object consumable by the database. They also handle converting objects from the database into something that can be returned to the user. Additionally, a serializer also specifies which fields are required and what properties they have. For this project, we create the TaskSerializer which expects create objects to have a name, description, and project id field to create the object."
+   1. "Serializers are responsible for taking the user input, validating it and turning it into an object consumable by the database  :floppy_disk:. They also handle converting objects from the database into something that can be returned to the user. Additionally, a serializer also specifies which fields are required and what properties they have."
    1.
 1. why
    1. keep code organized  :bowtie:
