@@ -1,12 +1,15 @@
 
-## Serializers
+## DRF Serializers
 
 1. what they do
-  1. validate data
-  1. convert model instances to Python datatypes 
-  1. deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.
-  1.
+   1. validate data
+   1. convert model instances to Python datatypes 
+   1. deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.
+   1.
 1. why
+   1. keep code organized  :bowtie:
+   1. validation & conversion is done in one place
+   1.
 
 1. what does **validate data** means :  
    1. After putting the data received in the fields it belongs, the data will be passed to [validators](https://www.django-rest-framework.org/api-guide/validators/)
@@ -23,5 +26,8 @@
       1. " Django’s querysets are protected from SQL injection since their queries are constructed using query parameterization. A query’s SQL code is defined separately from the query’s parameters. Since parameters may be user-provided and therefore unsafe, they are escaped by the underlying database driver."
       1.
 1. why they have a save method
-
+   1. `save()` calls 
+   1. `self.create()` which calls
+   1. `ModelClass._default_manager.create(validated_data)` & returns the `instance`
+   1.
 1. should we write validators for everything
