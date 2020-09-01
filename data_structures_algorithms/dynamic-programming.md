@@ -17,7 +17,7 @@ Some thoughts in my own words.
    1. Yes or no.  
 
 
-
+1. Memoization- store results 
 1. Optimize a problem by storing intermediaries 
 
 1. Iteration vs Recursion 
