@@ -23,4 +23,7 @@ Profiling :
       1. select_related is for single value relatinship like foreign key
       1. prefetch_related is for m2m & reversing a foreign key relationship.
       1. 9/02/20
+      1.
+   1. Limiting the data return by queries
+      1.
       
