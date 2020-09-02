@@ -14,3 +14,9 @@ Profiling :
 1. slow query log (have to be turned on in database conf)
 1. debug toolbar
 1. In the database with query plans
+1.
+1.
+1.
+1. Chapter 3
+   1. Using select_related to avoid the N+1 problem
+      1. profile = Profile.objects.select_related('user').all()
