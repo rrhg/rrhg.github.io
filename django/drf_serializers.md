@@ -32,11 +32,12 @@
       1. 
    1. Does validation protects from SQL injection  :worried: ?
       1. No. 
-      1. But hat is done [here](https://docs.djangoproject.com/en/3.1/topics/security/#sql-injection-protection).
+      1. But that is done [here](https://docs.djangoproject.com/en/3.1/topics/security/#sql-injection-protection).
       1. " Django’s querysets are protected from SQL injection since their queries are constructed using query parameterization. A query’s SQL code is defined separately from the query’s parameters. Since parameters may be user-provided and therefore unsafe, they are escaped by the underlying database driver."
       1.
-1. why they have a save method
-   1. `save()` calls 
+1. Why serializers have a save method
+   1. `viewsets`  call `seralizer.save()` 
+   1. `serializer.save()` calls 
    1. `self.create()` which calls
    1. `ModelClass._default_manager.create(validated_data)` & returns the `instance`
    1.
