@@ -2,26 +2,26 @@
 ## DRF Serializers
 
 1. What they do
-   1. validate data
-   1. convert model instances to Python datatypes 
-   1. deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.
+   1. Validate data
+   1. Convert model instances to Python datatypes 
+   1. Deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.
    1.
    1. "Serializers are responsible for taking the user input, validating it and turning it into an object consumable by the database  :floppy_disk:. They also handle converting objects from the database into something that can be returned to the user. Additionally, a serializer also specifies which fields are required and what properties they have."
    1.
-1. why
-   1. keep code organized  :bowtie:
-   1. validation & conversion is done in one place
-   1. Getting aditional data from request is 
+1. Why
+   1. Keep code organized  :bowtie:
+   1. Validation & conversion is done in one place
+   1. Getting aditional data from request is easier 
       1. Instead of doing `name = request.data.get("name")`  
-         1. for every attribute
-         1. validate each field
-         1. deal with python data types
-            1. like dict keys that sometimes have quotes & sometimes does not.
-         1. You can pass a serializer to a viewset & let DRF do everything for you, 
-         1. and if you need aditional data :
+         1. For every attribute
+         1. Validate each field
+         1. Deal with python data types
+            1. Like dict keys that sometimes have quotes & sometimes does not.
+      1. You can pass a serializer to a viewset & let DRF do everything for you, 
+         1. And if you need aditional data :
             1. You can do `validated_data.get('name')
 
-1. what does **validate data** means :  
+1. What does **validate data** means :  
    1. After putting the data received in the fields it belongs, the data will be passed to [validators](https://www.django-rest-framework.org/api-guide/validators/)
    1. What does validators do ?
       1. If for example, a model field has a `unique=True` constrain, then the validator will make sure it is unique or raise an exception & posibly return a 400 Bad Request
@@ -40,6 +40,6 @@
    1. `self.create()` which calls
    1. `ModelClass._default_manager.create(validated_data)` & returns the `instance`
    1.
-1. Creating & using serializers & viewset for one instance at a time is well explained in the [docs](https://www.django-rest-framework.org/api-guide/serializers/)
+1. Creating & using serializers & viewset for **one instance at a time** is well explained in the [docs](https://www.django-rest-framework.org/api-guide/serializers/)
 1.
 1.
