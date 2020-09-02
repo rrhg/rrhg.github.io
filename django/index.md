@@ -3,6 +3,8 @@
 
 [database & models](https://github.com/rrhg/rrhg.github.io/blob/master/django/database_and_models/index.md)
 
+[DRF Serializers](./drf_serializers.md)
+
 [signals](signals.md)
 
 [react_dynamic_routes_with_django.md](https://github.com/rrhg/rrhg.github.io/blob/master/django/react_dynamic_routes_with_django.md)
