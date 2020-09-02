@@ -40,7 +40,8 @@
    1. `serializer.save()` calls 
    1. `self.create()` which calls
    1. `ModelClass._default_manager.create(validated_data)` & returns the `instance`
-   1.
+   1. This behavior in `create()` is the one that we can override in order to support **nested** & **multiple** object creations. See below.
+   1. 
 1. Creating & using serializers & viewset for **one instance at a time** is well explained in the [docs](https://www.django-rest-framework.org/api-guide/serializers/)
 1. 
 1. Dealing with **nested objects** is also [well explained](https://www.django-rest-framework.org/api-guide/serializers/#dealing-with-nested-objects)
