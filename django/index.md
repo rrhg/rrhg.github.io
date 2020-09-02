@@ -3,7 +3,7 @@
 
 [database & models](https://github.com/rrhg/rrhg.github.io/blob/master/django/database_and_models/index.md)
 
-[DRF Serializers](./drf_serializers.md)
+[DRF Serializers](https://github.com/rrhg/rrhg.github.io/blob/master/django/drf_serializers.md)
 
 [signals](signals.md)
 
