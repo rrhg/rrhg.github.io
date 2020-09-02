@@ -26,7 +26,7 @@
    1. What does validators do ?
       1. If for example, a model field has a `unique=True` constrain, then the validator will make sure it is unique or raise an exception & posibly return a 400 Bad Request
    1. When validation is done ?
-      1. When we call [data.isValid()](https://github.com/encode/django-rest-framework/blob/master/rest_framework/serializers.py#L215)
+      1. When we call [serializer.isValid()](https://github.com/encode/django-rest-framework/blob/master/rest_framework/serializers.py#L215)
       1. isValid() calls other methods & at the end they pass the data to validators
       1. When deserializing data, you always need to call is_valid() before attempting to access the validated data, or save an object instance. If any validation errors occur, the .errors property will contain a dictionary representing the resulting error messages.
       1. 
