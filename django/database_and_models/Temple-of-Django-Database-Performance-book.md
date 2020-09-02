@@ -18,5 +18,9 @@ Profiling :
 1.
 1.
 1. Chapter 3
-   1. Using select_related to avoid the N+1 problem
-      1. profile = Profile.objects.select_related('user').all()
+   1. Using select_related & prefetch_related to avoid the N+1 problem
+      1. Example: profile = Profile.objects.select_related('user').all()
+      1. select_related is for single value relatinship like foreign key
+      1. prefetch_related is for m2m & reversing a foreign key relationship.
+      1. 9/02/20
+      
