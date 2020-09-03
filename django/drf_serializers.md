@@ -64,9 +64,10 @@
 1. The [ModelSerializer](https://www.django-rest-framework.org/api-guide/serializers/#modelserializer) class provides a shortcut that lets you automatically create a Serializer class with fields that correspond to the Model fields.
    1. [Specifying-which-fields-to-include](https://www.django-rest-framework.org/api-guide/serializers/#specifying-which-fields-to-include)
 1.
-1. 
-
-
+1. [overriding-serialization-and-deserialization-behavior](https://www.django-rest-framework.org/api-guide/serializers/#overriding-serialization-and-deserialization-behavior) 
+   1. `to_internal_value` :  Takes the unvalidated incoming data as input and should return the validated data that will be made available as serializer.validated_data
+   1. `to_representation` : from model instance to output 
+   1. We can for example specify what data we need, & improve performance.
 
 9/01/2020
 
