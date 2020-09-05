@@ -29,6 +29,7 @@ Some thoughts in my own words.
       1. to the overlapping sub problems 
 
 1. Memoization- store results 
+   1. Memoized == cached
 1. Optimize a problem by storing intermediaries 
 
 1. Iteration vs Recursion 
