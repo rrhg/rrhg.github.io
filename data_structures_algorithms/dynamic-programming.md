@@ -24,7 +24,9 @@ Some thoughts in my own words.
    1. Optimization (Maximum or Minimum)
       1. Minimum steps needed...
    1. Yes or no.  
-
+1. The optimal solution of the high level abstract problem 
+   1. depends on the optimal solution 
+      1. to the overlapping sub problems 
 
 1. Memoization- store results 
 1. Optimize a problem by storing intermediaries 
