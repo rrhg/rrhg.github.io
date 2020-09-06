@@ -1,11 +1,11 @@
 
-Some thoughts in my own words.  
+Some thoughts & quotes about Dynamic Programming.  :computer:   
 
 1. Dynamically creating something  
     like updating a `list` of calculated values. 
 
 1. Instead of many loops:   
-    Save results. 
+    Save results.  :memo: 
 1. Braking the problem into sub problems 
 1. Is about finding some work that the naive (usually recursive) solution would repeat multiple times unnecessarily.
    1. Instead is better to store the result of that subproblem & reuse it to avoid extra computation.
