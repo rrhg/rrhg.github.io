@@ -15,4 +15,11 @@ Because we get better auto complete in the IDE (vs code). Functions cold be empt
 Why pass value in context.Provider if we already assigned a default?
 The defaultValue argument is only used when a component does not have a matching Provider above it in the tree. This can be helpful for testing components in isolation without wrapping them. Note: passing undefined as a Provider value does not cause consuming components to use defaultValue.
 
-
+### why this is a bad idea & what to do instead ?
+```
+    <MyContext.Provider value={{something: 'something'}}>
+```
+It can cause unnecessary rerenders. Do this instead(use parent state) :
+```
+<Provider value={this.state.value}>
+```
