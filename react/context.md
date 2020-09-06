@@ -6,3 +6,7 @@
 
 
 ### Summary of how to use context
+
+
+Why is recommended to set a default value when creating the context ?
+Because we get better auto complete in the IDE (vs code)
