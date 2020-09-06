@@ -10,3 +10,7 @@
 
 Why is recommended to set a default value when creating the context ?
 Because we get better auto complete in the IDE (vs code)
+
+
+Why pass value in context.Provider if we already assigned a default?
+
