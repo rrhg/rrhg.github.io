@@ -23,3 +23,10 @@ It can cause unnecessary rerenders. Do this instead(use parent state) :
 ```
 <Provider value={this.state.value}>
 ```
+   
+   
+why I couldn't get my compnent context to works on it's own rendering components ?
+The provider always needs to exist as a wrapper around the parent element, no matter how you choose to consume the values. 
+https://www.taniarascia.com/using-context-api-in-react/   
+
+
