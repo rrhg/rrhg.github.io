@@ -25,8 +25,35 @@ It can cause unnecessary rerenders. Do this instead(use parent state) :
 ```
    
    
-why I couldn't get my compnent context to works on it's own rendering components ?
+### why I couldn't get my current component context to works on it's own rendering components ?
 The provider always needs to exist as a wrapper around the parent element, no matter how you choose to consume the values. 
 https://www.taniarascia.com/using-context-api-in-react/   
 
+It's not about my element comunicating with it's children, a better description would be, that we need a grand parent that would keep a context & a state. 
 
+
+How does context help with drilling props ?
+Example :
+```
+      <Questions isExam={isExam}
+                 exam={exam}
+                 headertitle="Examination"
+                 addQuestionScore={addQuestionScore}
+                 calculateTotalScore={calculateTotalScore}
+                 totalScoreState={totalScoreState}
+                 submitExamScores={submitExamScores}
+                 setNote={setNote}
+                 setExamNote={setExamNote}
+                 setQuestionNote={setQuestionNote}
+                 >
+      </Questions>
+ ```   
+ And Questions component has many children, & we had to be passing props too many times. It was dificult to keep up.   
+ Now, each child, that needs access to a context variable or method can just do :   
+ ```
+ import context ...
+ const examinationContext = useContext(ExaminationContext)
+ examinationContext.someMethod()
+ ```
+ 
+ 
