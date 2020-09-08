@@ -1,41 +1,42 @@
 
 ## Basic usage   
 ```
-// context.js
+//   context.js
 export const ExaminationContext = React.createContext()
 export class Provider extends React.Component {
 ...
-return (
+    return (
         <ExaminationContext.Provider value={this.props.value}> // if keeping state in another component
                                     // value={initialValue}
-          {this.props.children}
+            {this.props.children}
         </ExaminationContext.Provider>
   );
   export const Consumer = ExaminationContext.Consumer; // for other type of use
   
-  // parent.js
+  
+//   parent.js
 import { ExaminationContext, Provider, Consumer } from "./examination-context"
-const contextValue = { 
-  somevar: "somevar",
-  somemethod: somemethod,
-}
-...
-return (
-//    context attributes available to children components
-    <Provider value={contextValue}>  
-      <Children>
-      <GrandChildren>
-      ...
-    </Provider>
+        const contextValue = { 
+          somevar: "somevar",
+          somemethod: somemethod,
+        }
+        ...
+        return (
+            //    context attributes available to children components
+            <Provider value={contextValue}>  
+              <Children>
+              <GrandChildren>
+              ...
+            </Provider>
 
 
-// grandchildren.js
+//   grandchildren.js
 import { ExaminationContext, Provider, Consumer } from "./examination-context"
-const examinationContext = useContext(ExaminationContext)
-  // usage
-  examinationContext.somevar
-  examinationContext.somemethod(arg1, arg2)
-  ...
+        const examinationContext = useContext(ExaminationContext)
+          // usage
+          examinationContext.somevar
+          examinationContext.somemethod(arg1, arg2)
+          ...
 ```   
 
 
