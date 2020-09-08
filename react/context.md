@@ -1,4 +1,44 @@
 
+## Basic usage   
+```
+// context.js
+export const ExaminationContext = React.createContext()
+export class Provider extends React.Component {
+...
+return (
+        <ExaminationContext.Provider value={this.props.value}> // if keeping state in another component
+                                    // value={initialValue}
+          {this.props.children}
+        </ExaminationContext.Provider>
+  );
+  export const Consumer = ExaminationContext.Consumer; // for other type of use
+  
+  // parent.js
+import { ExaminationContext, Provider, Consumer } from "./examination-context"
+const contextValue = { 
+  somevar: "somevar",
+  somemethod: somemethod,
+}
+...
+return (
+//    context attributes available to children components
+    <Provider value={contextValue}>  
+      <Children>
+      <GrandChildren>
+      ...
+    </Provider>
+
+
+// grandchildren.js
+import { ExaminationContext, Provider, Consumer } from "./examination-context"
+const examinationContext = useContext(ExaminationContext)
+  // usage
+  examinationContext.somevar
+  examinationContext.somemethod(arg1, arg2)
+  ...
+```   
+
+
 ## can context be used with Redux in the same React App ?
 
 ## can we have many different contexts for different components in the same React App ?
