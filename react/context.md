@@ -1,4 +1,4 @@
-
+## Basic idea   
 ## Basic usage   
 ### Can context be used with Redux in the same React App ?
 ### Can we have many different contexts for different components in the same React App ?
@@ -31,6 +31,15 @@
 ||   
 ||   
 \\/   
+
+
+
+## Basic idea   
+1. Create a context
+1. Import & use it in a Parent component
+1. Pass it a state (object with attributes & methods)
+1. Import & use it's attributes & methods from Children & GrandChildren components
+1. No need to prop drilling   
 
 
 
