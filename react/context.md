@@ -41,6 +41,14 @@ import { ExaminationContext, Provider, Consumer } from "./examination-context"
           examinationContext.somevar
           examinationContext.somemethod(arg1, arg2)
           ...
+          
+          
+          // but in class components is used like this :
+          static contextType = UserContext
+
+          componentDidMount() {
+              const user = this.context
+              ...
 ```   
 
 
