@@ -1,5 +1,41 @@
 
 ## Basic usage   
+### Can context be used with Redux in the same React App ?
+### Can we have many different contexts for different components in the same React App ?
+### Why is recommended to set a default value when creating the context ?
+### Why pass value in context.Provider if we already assigned a default?
+### Why I couldn't get my current component context to works on it's own rendering components ?
+### How does context help with drilling props ?
+
+
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+||   
+\/   
+
+
+
+
+## Basic usage   
 ```   
 
 //   context.js
@@ -52,10 +88,10 @@ import { ExaminationContext, Provider, Consumer } from "./examination-context"
 ```   
 
 
-## Can context be used with Redux in the same React App ?
+### Can context be used with Redux in the same React App ?
 Yes   
 
-## Can we have many different contexts for different components in the same React App ?
+### Can we have many different contexts for different components in the same React App ?
 Yes. Context does NOT have to be global to the whole app, but can be applied to one part of your tree and you can (and probably should) have multiple logically separated contexts in your app.
 
 
