@@ -37,3 +37,11 @@ Some thoughts & quotes about Dynamic Programming.  :computer:
       1.  However, in the process of such division, you may encounter the same problem many times.
    1. The basic idea of dynamic programming is to use a table to store the solutions of solved subproblems. If you face a subproblem again, you just need to take the solution in the table without having to solve it again. Therefore, the algorithms designed by dynamic programming are very effective.
 1. Iteration vs Recursion 
+1. Steps 
+   1. Define Objective Function 
+   1. Identify Base Cases
+   1. Recurrence Relation
+   1. Order of computation 
+   1. Location of the answer
+1.
+
