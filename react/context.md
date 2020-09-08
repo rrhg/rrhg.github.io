@@ -1,6 +1,7 @@
 
 ## Basic usage   
-```
+```   
+
 //   context.js
 export const ExaminationContext = React.createContext()
 export class Provider extends React.Component {
@@ -13,7 +14,8 @@ export class Provider extends React.Component {
         </ExaminationContext.Provider>
   );
 export const Consumer = ExaminationContext.Consumer; // for other type of use
-  
+
+
   
 //   parent.js
 import { ExaminationContext, Provider, Consumer } from "./examination-context"
@@ -31,6 +33,7 @@ import { ExaminationContext, Provider, Consumer } from "./examination-context"
             </Provider>
 
 
+
 //   grandchildren.js
 import { ExaminationContext, Provider, Consumer } from "./examination-context"
         const examinationContext = useContext(ExaminationContext)
@@ -42,7 +45,7 @@ import { ExaminationContext, Provider, Consumer } from "./examination-context"
 
 
 ## can context be used with Redux in the same React App ?
-yes   
+Yes   
 
 ## can we have many different contexts for different components in the same React App ?
 Yes. Context does NOT have to be global to the whole app, but can be applied to one part of your tree and you can (and probably should) have multiple logically separated contexts in your app.
