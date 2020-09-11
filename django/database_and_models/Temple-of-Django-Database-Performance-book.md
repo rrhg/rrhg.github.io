@@ -25,5 +25,7 @@ Profiling :
       1. 9/02/20
       1.
    1. Limiting the data return by queries
-      1.
+   1. Iterating Over Large Querysets with iterator() 9/09/20
+   1.
+   1. 
       
