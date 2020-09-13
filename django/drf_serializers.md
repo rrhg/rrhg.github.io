@@ -81,3 +81,14 @@
       1. Can we send it like this `return Response(exam)`
       1. No. Error object is not serializable
       1. We need to wrap it on a serilizer.
+1. How use different serializers basd on action ?
+```   
+class DualSerializerViewSet(viewsets.ModelViewSet):
+    def get_serializer_class(self):
+        if self.action == 'list':  # get request to /api/mymodels/
+            return serializers.ListaGruppi
+        if self.action == 'retrieve': # get request to /api/mymodels/id
+            return serializers.DettaglioGruppi
+        if self.action == 'create':   # post request to /api/mymodels/id
+        return serializers.Default
+ ```
