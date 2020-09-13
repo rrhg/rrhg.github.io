@@ -70,8 +70,8 @@
    1. We can for example specify what data we need, & improve performa
 
 9/01/2020
-1. Questions
-   1. How to customize ModelSerializer behavior when retreiving details of just one DB item ?
+1. ModelViewSet questions
+   1. How to customize the behavior when retreiving details of just one DB item ?
       1. for example, when making a get request to mysite.com/api/mymodel/1/
       1. override retreive() method
    1. ModelViewSet - what does the self.get_object() method returns ?
