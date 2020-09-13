@@ -67,7 +67,13 @@
 1. [overriding-serialization-and-deserialization-behavior](https://www.django-rest-framework.org/api-guide/serializers/#overriding-serialization-and-deserialization-behavior) 
    1. `to_internal_value` :  Takes the unvalidated incoming data as input and should return the validated data that will be made available as serializer.validated_data
    1. `to_representation` : from model instance to output 
-   1. We can for example specify what data we need, & improve performance.
+   1. We can for example specify what data we need, & improve performa
 
 9/01/2020
-
+1. Questions
+   1. How to customize ModelSerializer behavior when retreiving details of just one DB item ?
+      1. for example, when making a get request to mysite.com/api/mymodel/1/
+      1. override retreive() method
+   1. ModelViewSet - what does the self.get_object() method returns ?
+      1. The instance of the Model from the queryset
+      1. It can be used in the retreive(), list(), create(), etc.
