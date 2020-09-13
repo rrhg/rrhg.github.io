@@ -74,6 +74,10 @@
    1. How to customize the behavior when retreiving details of just one DB item ?
       1. for example, when making a get request to mysite.com/api/mymodel/1/
       1. override retreive() method
-   1. ModelViewSet - what does the self.get_object() method returns ?
+   1. What does the self.get_object() method returns ?
       1. The instance of the Model from the queryset
       1. It can be used in the retreive(), list(), create(), etc.
+   1. If we get `exam = self.get_object()` inside retreive() method ?
+      1. Can we send it like this `return Response(exam)`
+      1. No. Error object is not serializable
+      1. We need to wrap it on a serilizer.
