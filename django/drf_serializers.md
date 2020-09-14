@@ -70,7 +70,7 @@
    1. We can for example specify what data we need, & improve performa
 
 9/01/2020
-1. ModelViewSet questions
+### ModelViewSet questions
    1. How to customize the behavior when retreiving details of just one DB item ?
       1. for example, when making a get request to mysite.com/api/mymodel/1/
       1. override retreive() method
@@ -81,7 +81,7 @@
       1. Can we send it like this `return Response(exam)`
       1. No. Error object is not serializable
       1. We need to wrap it on a serilizer.
-1. How use different serializers basd on action ?
+1. How use different serializers based on action ?
 ```   
 class DualSerializerViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
@@ -92,7 +92,7 @@ class DualSerializerViewSet(viewsets.ModelViewSet):
         if self.action == 'create':   # post request to /api/mymodels/id
         return serializers.Default
  ```
-How filter the global queryset for a ModelViewSet
+How filter the global queryset for a ModelViewSet   
 How get user   
 
 ```
@@ -103,6 +103,6 @@ How get user
 ```   
 
 
-Serializers questions   
+### Serializers questions   
 1. How get current user in a serilizer method ?
    1. `user = self.context['request'].user`
