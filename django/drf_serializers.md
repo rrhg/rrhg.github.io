@@ -92,3 +92,7 @@ class DualSerializerViewSet(viewsets.ModelViewSet):
         if self.action == 'create':   # post request to /api/mymodels/id
         return serializers.Default
  ```
+   
+Serializers questions   
+1. How get current user in a serilizer method ?
+   1. `user = self.context['request'].user`
