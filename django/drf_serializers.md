@@ -105,4 +105,39 @@ How get user
 
 ### Serializers questions   
 1. How get current user in a serilizer method ?
-   1. `user = self.context['request'].user`
+   1. `user = self.context['request'].user`   
+   
+With Django REST Framework, a standard ModelSerializer will allow ForeignKey model relationships to be assigned or changed by POSTing an ID as an Integer.
+
+What's the simplest way to get this behavior out of a nested serializer?   
+[https://stackoverflow.com/questions/29950956/drf-simple-foreign-key-assignment-with-nested-serializers](https://stackoverflow.com/questions/29950956/drf-simple-foreign-key-assignment-with-nested-serializers)   
+```
+from rest_framework import serializers
+
+
+class RelatedFieldAlternative(serializers.PrimaryKeyRelatedField):
+    def __init__(self, **kwargs):
+        self.serializer = kwargs.pop('serializer', None)
+        if self.serializer is not None and not issubclass(self.serializer, serializers.Serializer):
+            raise TypeError('"serializer" is not a valid serializer class')
+
+        super().__init__(**kwargs)
+
+    def use_pk_only_optimization(self):
+        return False if self.serializer else True
+
+    def to_representation(self, instance):
+        if self.serializer:
+            return self.serializer(instance, context=self.context).data
+        return super().to_representation(instance)
+        
+class ParentSerializer(ModelSerializer):
+   child = RelatedFieldAlternative(queryset=Child.objects.all(), serializer=ChildSerializer)
+
+    class Meta:
+        model = Parent
+        fields = '__all__'   
+        
+```   
+
+
