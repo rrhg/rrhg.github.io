@@ -3,7 +3,7 @@
 
 **Shorter** - - - - - - - **Longer**
 
- Python - - - - - - - Javascript
+ **Python** - - - - - - - **Javascript**
 
 len() - - - - - - - - - array.length
 
