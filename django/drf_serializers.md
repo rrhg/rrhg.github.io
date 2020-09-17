@@ -160,6 +160,41 @@ class ExamDetailSerializer(serializers.ModelSerializer, MutableFields):
         return QuestionSerializer(questions, many=True).data
 ```   
 
+### How create get DB object, serialize it & send it, "on the fly" ?   
+```
+    @action(detail=True, methods=['get'], permission_classes = [AllowAny])
+    def questionsdue(self, request, pk=None):
+        #  ...
+        # print('pk',pk)
+        user = request.user
+        qs = Exam.objects.filter(id=pk,users__id=user.id)
+        # print('qs',qs.__dict__)        
+        s = ExamSerializerForCreate(qs, many=True)
+        # s = ExamDetailSerializer(qs) # need many=True
+        # s.is_valid() # not needed. not sure why
+        return Response({'data': s.data})
+
+```
+
+
+
+
+
+### How include context ?
+### why serializing the next queryset needs many=True ?   
+### why the error is misleading ?
+
+        qs = Exam.objects.filter(id=pk,users__id=user.id)   
+        
+```
+serializer = MessageSerializer(qs, many=True, context={'request': request})
+# needs many=True because even if it is only going to receive 1 object (id=pk), since we are filtering(users__id=user.id), the serializers thinks we can receive a list, & somewhere down the pipeline, someone is expecting a list.
+
+But the error msg is misleading, because instead of saying that someone was expecting a list, or soemething related, yhe mag says that the queryset has no attribute ...(like id, or any other attribute   
+
+```
+
+
 
 ---
 
