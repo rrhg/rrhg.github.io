@@ -103,11 +103,11 @@ How get user
 ```   
 
 
-### Serializers questions   
-1. How get current user in a serilizer method ?
+## Serializers questions   
+###How get current user in a serilizer method ?
    1. `user = self.context['request'].user`   
    
-With Django REST Framework, a standard ModelSerializer will allow ForeignKey model relationships to be assigned or changed by POSTing an ID as an Integer.
+### With Django REST Framework, a standard ModelSerializer will allow ForeignKey model relationships to be assigned or changed by POSTing an ID as an Integer.
 
 What's the simplest way to get this behavior out of a nested serializer?   
 [https://stackoverflow.com/questions/29950956/drf-simple-foreign-key-assignment-with-nested-serializers](https://stackoverflow.com/questions/29950956/drf-simple-foreign-key-assignment-with-nested-serializers)   
