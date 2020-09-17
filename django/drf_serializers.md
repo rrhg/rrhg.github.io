@@ -141,3 +141,29 @@ class ParentSerializer(ModelSerializer):
 ```   
 
 
+### How customize what a serilizer field will return ?
+### How filter the queryset for a child serializer to items where the current user is added to it's users ?   
+```
+class ExamDetailSerializer(serializers.ModelSerializer, MutableFields):
+    questions = serializers.SerializerMethodField()
+    class Meta:
+        model = Exam
+        fields = [
+            "id",
+            "title",
+            "questions",
+            ...
+            ]
+    def get_questions(self, instance):
+        user = self.context['request'].user
+        questions = instance.questions.filter(users__id=user.id)
+        return QuestionSerializer(questions, many=True).data
+```   
+
+
+---
+
+
+
+
+
