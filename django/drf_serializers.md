@@ -174,7 +174,9 @@ class ExamDetailSerializer(serializers.ModelSerializer, MutableFields):
         # s.is_valid() # not needed. not sure why
         return Response({'data': s.data})
 
-```
+```   
+
+
 
 
 
@@ -197,7 +199,9 @@ But the error msg is misleading, because instead of saying that someone was expe
 
 ```
 
+### How model serializer deals with relationship field ?    
 
+Any relationships such as foreign keys on the model will be mapped to PrimaryKeyRelatedField. Reverse relationships are not included by default unless explicitly included as specified in the serializer relations documentation.
 
 ---
 
