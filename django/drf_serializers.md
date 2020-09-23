@@ -75,9 +75,12 @@
 
 ### When to pass queryset & when pass data(kwarg) to a serializer ?   
 ### When we need to call serializer.is_valid()   
-
-`Queryset`- when retrieving data from database. Can return `Response(Serializer.data)` without calling `serializer.is_valid()`
-
+   
+`serializer = CommentSerializer(queryset)`
+`Queryset`- when retrieving data from database. Can return `Response(Serializer.data)` without calling `serializer.is_valid()`   
+   
+   
+`serializer = CommentSerializer(data=request.data)`
 `data=request.data` - when receiving incoming data. Need to call `serializer.is_valid()` before `serializer.save()`   
 For good example see functional views.   
 
