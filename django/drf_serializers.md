@@ -69,7 +69,19 @@
    1. `to_representation` : from model instance to output 
    1. We can for example specify what data we need, & improve performa
 
-9/01/2020
+9/01/2020   
+
+### Questions   
+
+### When to pass queryset & when pass data(kwarg) to a serializer ?   
+### When we need to call serializer.is_valid()   
+
+`Queryset`- when retrieving data from database. Can return `Response(Serializer.data)` without calling `serializer.is_valid()`
+
+`data=request.data` - when receiving incoming data. Need to call `serializer.is_valid()` before `serializer.save()`   
+For good example see functional views.   
+
+
 ### ModelViewSet questions
    1. How to customize the behavior when retreiving details of just one DB item ?
       1. for example, when making a get request to mysite.com/api/mymodel/1/
