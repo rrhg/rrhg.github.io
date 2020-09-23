@@ -5,7 +5,7 @@
    1. Validate data
    1. Convert database model instances to Python datatypes 
    1. Deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.
-   1.
+   1. Deal with json, xml, csv 
    1. "Serializers are responsible for taking the user input, validating it and turning it into an object consumable by the database  :floppy_disk:. They also handle converting objects from the database into something that can be returned to the user. Additionally, a serializer also specifies which fields are required and what properties they have."
    1.
 1. Why
