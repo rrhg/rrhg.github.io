@@ -1,5 +1,5 @@
-## Basic idea   
-## Basic usage   
+## What's the basic idea ?   
+## Basic usage ?  
 ### Can context be used with Redux in the same React App ?
 ### Can we have many different contexts for different components in the same React App ?
 ### Why is recommended to set a default value when creating the context ?
