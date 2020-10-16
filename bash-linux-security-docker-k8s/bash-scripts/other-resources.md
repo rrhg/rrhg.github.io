@@ -12,6 +12,8 @@ Other resources that I link in the readme of that repo, because they were a grea
 - The Bash Hackers Wiki: https://wiki.bash-hackers.org/
 EDIT: -for anyone who would like to read some actual examples- I have to manage a bunch of scripts so actually a slightly more up to date version of the template is put into practice by means of a common bash.conf file that then g
    
-   
+      
+      
+      
 1. bash -how write code in functions instead of variables
 https://mywiki.wooledge.org/BashFAQ/050
