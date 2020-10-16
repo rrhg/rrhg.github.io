@@ -1,4 +1,4 @@
-https://news.ycombinator.com/item?id=23763166
+1. https://news.ycombinator.com/item?id=23763166
 
 
 learnt the same trick some years ago, from an article called Shell Scripts Matter:
@@ -13,5 +13,5 @@ Other resources that I link in the readme of that repo, because they were a grea
 EDIT: -for anyone who would like to read some actual examples- I have to manage a bunch of scripts so actually a slightly more up to date version of the template is put into practice by means of a common bash.conf file that then g
    
    
-bash -how write code in functions instead of variables
+1. bash -how write code in functions instead of variables
 https://mywiki.wooledge.org/BashFAQ/050
