@@ -29,7 +29,7 @@ string[1:-1] - - - - string.slice(1, -1)
 
 bool() - - - - - - - Boolean()
 
-
+mydict.items() - - - - - -Object.entries(obj)
 
 
 
