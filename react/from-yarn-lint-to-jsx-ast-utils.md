@@ -89,6 +89,7 @@ A babel plugin
     - pass AST to babel/generator to be converted back to code   
     
 eslint   
-
+ si eslint convierte el ast en codigo, creo q no pq solo dice si hay errores.
+ pero tambien hace fix ?
 
 
