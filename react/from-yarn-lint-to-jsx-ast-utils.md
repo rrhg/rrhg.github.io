@@ -83,10 +83,10 @@ console.log(output.code); // 'const x = 1;'
 ```   
 
 ### But how is that related to eslint   
-A babel plugin 
-    - takes AST from babel/parser
-    - transform the AST using babel/traverse
-    - pass AST to babel/generator to be converted back to code   
+1. A babel plugin 
+   1. takes AST from babel/parser
+   1. transform the AST using babel/traverse
+   1. pass AST to babel/generator to be converted back to code   
     
 eslint   
  si eslint convierte el ast en codigo, creo q no pq solo dice si hay errores.
