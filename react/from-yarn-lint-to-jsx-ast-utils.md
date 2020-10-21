@@ -1,11 +1,35 @@
 
-### From `yarn lint` to `jsx-ast-utils`   
+### From `yarn lint` to `eslint` to `babel` to `jsx-ast-utils`   
 
 A discovery journey about npm dependencies, ASTs, parsers & the likes...   
 
-> it turns out, the argument receives is something called an AST... Wait what ???   :confused:   
+> it turns out, the argument received is something called an AST... Wait what ???   :confused:   
 
 
+So, my firsts 2 accepted & merged Pull Requests were with the library jsx-ast-utils.  Here is a summary of how it works, how it is used, but more important, why you may have never heard of it even when it is used on every project where eslint & react are used together.   
 
 
+---   
+### Using Reactjs.org as an example   
+It all started with this issue.  The problem really was on jsx-ast-utils, which is a dependency of eslint-plugin-react which is a dependency Reacjs.org.  Easy right ? Piece of cake :cake: **What could posibly go wrong ?**   
+
+###  yarn lint   
+The issue could be reproduced by cloning Reactjs.org, & running `yarn` & `yarn lint`.
+If take a look at package.json we can see what it does :   
+1. `"scipts": { "lint": "eslint .", ...`   
+   1. Oh, that's easy, we are calling eslint.:ballot_box_with_check:   
+
+
+### eslint   
+If we look in .eslinrc (eslint config file) we see :   
+1. `"plugins": ["react", ...`
+   1. Oh cool, is using eslint-plugin-react 
+   1. This helps eslint deal with React instead of just javascript:ballot_box_with_check:
+1. `"parser": "babel-eslint"
+   1. eslint doesn't magically knows how to read javascript, it use a parser that takes javascript as input & outputs something eslint can understand :ballot_box_with_check:
+   1. That way eslint can see that you made a mistake.
+   1. The work performed by this parser is what **caught me off guard** :open_mouth: , but I'll explain that a few setps below...   
+   
+### eslint-plugin-react   
+1- 
 
