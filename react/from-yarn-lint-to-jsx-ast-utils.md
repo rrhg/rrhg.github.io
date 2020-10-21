@@ -31,8 +31,17 @@ If we look in `.eslinrc` (eslint config file) we see :
    1. The work performed by this parser is what **caught me off guard**  :open_mouth: , but I'll explain that a few setps below...   
    
 ### eslint-plugin-react   
-1- 
-
+1. To learn more about eslint plugins see : https://eslint.org/docs/developer-guide/working-with-plugins   
+1. But looking at the [plugin code](https://github.com/yannickcr/eslint-plugin-react/blob/master/index.js), I think it is simpler than it looks.
+   1. Basically is a set of rules added to eslint. 
+   1. Each rule is a function, that will :
+      1. Receive code from the parser(recieves ATS, but more on this below)
+      2. Use `jsx-ast-utils` & other helpers to make sense of the code
+      3. Make reports if it find something wrong
+      4. Of course it's more complicated than that, but we get the idea
+1. This plugin helps eslint deal with React instead of just javascript. 
+   1. For example, in vanilla javascript, there is no jsx.   
+   
 ### jsx-ast-utils   
 But how does `eslint-plugin-react` uses `jsx-ast-utils` ?   
 Here's an example :   
@@ -84,12 +93,14 @@ console.log(output.code); // 'const x = 1;'
 
 ### But how is that related to eslint   
 1. A babel plugin 
-   1. takes AST from babel/parser
-   1. transform the AST using babel/traverse
-   1. pass AST to babel/generator to be converted back to code   
+   1. Takes AST from babel/parser
+   1. Transform the AST using babel/traverse
+   1. Pass AST to babel/generator to be converted back to code   
     
-eslint   
- si eslint convierte el ast en codigo, creo q no pq solo dice si hay errores.
- pero tambien hace fix ?
+1. `eslint`
+   1. Takes AST from babel/parser
+   1. Use rules(functions) to read AST & report errors & deviations from the rules.
+   1. I still need to figure out how does it fix code
+ 
 
 
