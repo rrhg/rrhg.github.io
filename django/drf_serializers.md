@@ -214,9 +214,9 @@ serializer = MessageSerializer(qs, many=True, context={'request': request})
 
 # needs many=True because even if it is only going to receive 1 object (id=pk), since we are filtering(users__id=user.id), the serializers thinks we can receive a list, & somewhere down the pipeline, someone is expecting a list.
 
-# need to pass context because I was instantiating the serializer myself & returning the Reaponse with serializer.data.  Normally, we don't do that, instead we give the viewSet a seriliazer, & let the vieSet instantiate the serializer. In that case the viewSet takes care of passing the context.
+# need to pass context because I was instantiating the serializer myself & returning the Response with serializer.data.  Normally, we don't do that, instead we give the viewSet a seriliazer, & let the vieSet instantiate the serializer. In that case the viewSet takes care of passing the context.
 
-But the error msg is misleading, because instead of saying that someone was expecting a list, or soemething related, yhe mag says that the queryset has no attribute ...(like id, or any other attribute   
+But the error msg is misleading, because instead of saying that someone was expecting a list, or soemething related, the msg says that the queryset has no attribute ...(like id, or any other attribute)   
 
 ```
 
