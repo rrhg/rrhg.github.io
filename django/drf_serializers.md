@@ -218,7 +218,12 @@ serializer = MessageSerializer(qs, many=True, context={'request': request})
 
 But the error msg is misleading, because instead of saying that someone was expecting a list, or soemething related, the msg says that the queryset has no attribute ...(like id, or any other attribute)   
 
-```
+```    
+
+### How did I confirm that ModelViewset pass the context with the request to the serializer ?   
+To update a model, I did not overrided ModelViewset.update() & did not pass the context myself.   Instead went directly to the serializer.update() method & was able to get the user by :   
+` user = self.context['request'].user `   
+
 
 ### How model serializer deals with relationship field ?    
 
