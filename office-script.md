@@ -1,18 +1,30 @@
 Some code snippets for office-script aka excel online javascript scripts :   
 
-```
+```   
 
-    // Format the range to display numerical dollar amounts.
+    //    save named items  (data that persist)
+    let mynamedItem = workbook.getNamedItem("quincenaPrevia2")
+    mynamedItem.delete()
+    workbook.addNamedItem("quincenaPrevia2", "Ene")
+    mynamedItem = workbook.getNamedItem("quincenaPrevia2")
+    console.log(mynamedItem.getValue())
+    mynamedItem.delete()
+    workbook.addNamedItem("quincenaPrevia2", "Feb")
+    console.log(mynamedItem.getValue())
+
+
+
+    //    Format the range to display numerical dollar amounts.
     selectedSheet.getRange("D2:E8").setNumberFormat("$#,##0.00");
 
-    // Fit the width of all the used columns to the data.
+    //    Fit the width of all the used columns to the data.
     selectedSheet.getUsedRange().getFormat().autofitColumns();   
     
     function main(workbook: ExcelScript.Workbook) {
     workbook.refreshAllDataConnections()
     }
 
-    // taking data from a column & inserting in a row
+    //    taking data from a column & inserting in a row
     let data = sheet.getRange("B6:B12").getValues() // from acolumn
     // * for setValues(), data has to be in a sub arrays
     // * format for multiple values= [ [array for each row] ] 
