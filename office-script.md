@@ -44,6 +44,11 @@ function getEmpTotalSalaryInSheet(sheet: ExcelScript.Worksheet, empName) {
 
 function findValueRangeInSheet(sheet:ExcelScript.Worksheet, empName) {
   const range = sheet.getUsedRange()
+  
+  // another way for search for strings
+  //  range.getAll(text,criteria) // find all ocurrences of a string
+
+  
   // range.find was undefined before adding :ExcelScript.WorkSheet
   let found = range.find(empName, {
     completeMatch: true,
