@@ -59,6 +59,17 @@ function findValueRangeInSheet(sheet:ExcelScript.Worksheet, empName) {
   // if(found){console.log(found.getAddress())}
 } // end of getEmpTotalSalaryInSheet
 
+
+
+// reconstruct a table totals row when copying just values from another table, but still want to be able to get totals by table name/column/totals
+    const table = sheet.getTable("Table814")
+    const lastRowValues = table.getRange().getLastRow().getValues()
+    let index = table.getRowCount()
+    table.deleteRowsAt(Number(index-1))
+    table.setShowTotals(true)
+    table.getTotalRowRange().setValues(lastRowValues)
+    table.getTotalRowRange().getFormat().setHorizontalAlignment(ExcelScript.HorizontalAlignment.right)
+
 ...
 
 
