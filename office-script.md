@@ -2,6 +2,20 @@ Some code snippets for office-script aka excel online javascript scripts :
 
 ```   
 
+
+    // get the intersection cell range of an employee row & a table column
+    // 0 indexed
+    const columnIndex = INPUT_TABLE.getColumnByName(SALARY_COLUMN).getIndex()
+    // 0 indexed
+    const empRowIndex = findValueRangeInSheet(INPUTSHEET, String(e.name)).getRowIndex()
+
+    const cellRange = INPUTSHEET.getRangeByIndexes(empRowIndex, columnIndex, 1, 1)
+
+    console.log(cellRange.getAddress())
+
+
+
+
     //    save named items  (data that persist)
     let mynamedItem = workbook.getNamedItem("quincenaPrevia2")
     mynamedItem.delete()
