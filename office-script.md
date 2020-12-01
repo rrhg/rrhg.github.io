@@ -84,6 +84,34 @@ function findValueRangeInSheet(sheet:ExcelScript.Worksheet, empName) {
     table.getTotalRowRange().setValues(lastRowValues)
     table.getTotalRowRange().getFormat().setHorizontalAlignment(ExcelScript.HorizontalAlignment.right)
 
+
+  // find specific range in table 
+  //    - based on a string in row
+  //    - and a column by name
+    let firstEmployeeRow = findValueRangeInTable(outTable, "1").getEntireRow()
+  console.log('index = ' + firstEmployeeRow.getRowIndex())
+  console.log('firstEmployeeRow = ' + firstEmployeeRow.getAddress())
+    let firstColumnWithData = outTable.getColumn(REG_HOURS_COLUMN).getRange()
+  console.log('firstColumnWithData = ' + firstColumnWithData.getAddress() )
+    let firstCellWithData = firstEmployeeRow.getIntersection(firstColumnWithData)
+
+  console.log('firstCellWithData = ' + firstCellWithData.getAddress())
+
+    let lastCellWithData = outTable.getColumn("Salario-Neto").getRange().getLastRow()
+
+    let allCellsWithData = sheet.getRange(firstCellWithData.getAddress()+ ":" + lastCellWithData.getAddress() )
+
+  // // outTable.getRangeBetweenHeaderAndTotal().getResizedRange(0,) getRange()
+  
+    allCellsWithData.setNumberFormatLocal(
+     "_(* #,##0.00_);_(* (#,##0.00);_(* \"-\"??_);_(@_)"
+    );
+
+
+
+
+
+
 ...
 
 
