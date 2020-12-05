@@ -1,4 +1,14 @@
 
+
+  <detail>
+      <summary>
+          Title
+      </summary>
+      Content
+  </detail>
+
+
+
 Need to leave 2 spaces after each line. The enter key by itself doesn't work (like space bar twice then enter)  
 <br>
 ### A title or header  
