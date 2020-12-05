@@ -6,3 +6,12 @@
 [React](/react/index.md)
 
 [python vs javascript](/python-vs-javascript/index.md)
+
+
+
+  <detail>
+      <summary>
+          Title
+      </summary>
+      Content
+  </detail>
