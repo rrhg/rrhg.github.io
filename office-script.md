@@ -2,7 +2,54 @@ Some code snippets for office-script aka excel online javascript scripts :
 
 ```   
 
+    ////////////////////////////////////////////////
+    // refresh employees list for verification
+    workbook.refreshAllDataConnections()
 
+
+    ///////////////////////////////////////////////
+    protect & unprotect sheets & unlock/lock cells
+    empSheet.getProtection().unprotect();
+    cellsToCopy.getFormat().setHorizontalAlignment(ExcelScript.HorizontalAlignment.left)
+    empSheet.getUsedRange().getFormat().autofitColumns()
+    
+    
+  //    columns A & B from row 0 to 200
+  // const cellsToLock = empSheet.getRangeByIndexes(0, 0, 200, 2)
+  // cellsToLock.getFormat().getFill().setColor("#00FFFF")
+  // cellsToLock.getFormat().getProtection().setLocked(true)
+
+  // //     from C1 to J3
+  // const cellsToLock2 = empSheet.getRangeByIndexes(0, 2, 4, 8)
+  // cellsToLock2.getFormat().getFill().setColor("#00FFFF")
+  // cellsToLock2.getFormat().getProtection().setLocked(true)
+
+  // const cellsToUnlock = empSheet.getRangeByIndexes(4, 2, 200, 8)
+  // cellsToUnlock.getFormat().getProtection().setLocked(false)
+
+  // empSheet.getProtection().protect({
+    // allowFormatCells: false
+    // //allowFormatCells: true
+  // });
+
+
+    ///////////////////////////////////////////////
+    //save named item (persist data)
+    let mynamedItem = workbook.getNamedItem("quincenaPrevia2")
+    mynamedItem.delete()
+    workbook.addNamedItem("quincenaPrevia2", "Ene")
+    mynamedItem = workbook.getNamedItem("quincenaPrevia2")
+    console.log(mynamedItem.getValue())
+    mynamedItem.delete()
+    workbook.addNamedItem("quincenaPrevia2", "Feb")
+    console.log(mynamedItem.getValue())
+
+    // another example of presist data
+    
+
+
+    ////////////////////////////////////////////////
+    
     // get the intersection cell range of an employee row & a table column
     // 0 indexed
     const columnIndex = INPUT_TABLE.getColumnByName(SALARY_COLUMN).getIndex()
@@ -107,7 +154,13 @@ function findValueRangeInSheet(sheet:ExcelScript.Worksheet, empName) {
      "_(* #,##0.00_);_(* (#,##0.00);_(* \"-\"??_);_(@_)"
     );
 
-
+    //////////////////////////////////////////////////
+    
+    selectedSheet.getRange("C6")
+    .setValue("60");
+      // Set number formats for Ene!D10
+    selectedSheet.getRange("D10")
+    .setNumberFormatLocal("_([$$-en-US]* #,##0.00_);_([$$-en-US]* (#,##0.00);_([$$-en-US]* \"-\"??_);_(@_)");
 
 
 
