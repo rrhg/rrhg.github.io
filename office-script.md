@@ -45,6 +45,15 @@ Some code snippets for office-script aka excel online javascript scripts :
     console.log(mynamedItem.getValue())
 
     // another example of presist data
+    // //    persist data 
+    // let hideInputSheet = workbook.getNamedItem("hideEntrarQuinc")
+    // if (hideInputSheet) { // 
+      // workbook.addNamedItem("hideEntrarQuinc", "no")
+      // // get value again since it was undefined
+      // hideInputSheet = workbook.getNamedItem("hideEntrarQuinc")
+    // }
+    // console.log(hideInputSheet.getValue())
+    // hideInputSheet.delete()
     
 
 
