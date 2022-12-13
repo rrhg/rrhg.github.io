@@ -7,6 +7,7 @@
 
 [python vs javascript](/python-vs-javascript/index.md)
 
+[python test](/python-tests)
 
 
   <detail>
